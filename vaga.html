@@ -212,6 +212,7 @@
   .row2{display:grid;grid-template-columns:auto 1fr;gap:10px}
   .row2 .btn-ghost{justify-content:center}
   .priv{font:400 12px/18px var(--sans);color:#7d7d7d;text-align:center}
+  .priv a,.af .check a{color:var(--footer-link)}
   .err{color:#ff8a8f;font-size:14px}
   .q-count{font:400 13px/1 var(--mono);color:var(--ink-muted)}
   .done{display:grid;gap:14px}
@@ -288,12 +289,12 @@
             <div class="fld"><label for="pretensao">Pretensão salarial <i>*</i></label><input type="text" id="pretensao" name="pretensao" inputmode="numeric" placeholder="R$ 0.000,00" required></div>
             <p class="err" id="err1" hidden></p>
             <button type="button" class="btn" id="next">Continuar inscrição <svg class="arr" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.589 32.589"><g><path d="M 16.294 32.589 C 7.295 32.589 0 25.294 0 16.294 L 0 16.294 C 0 7.295 7.295 0 16.294 0 L 16.294 0 C 25.294 0 32.589 7.295 32.589 16.294 L 32.589 16.294 C 32.589 25.294 25.294 32.589 16.294 32.589 Z" fill="rgba(255,255,255,0.1)"></path><path d="M 11.5 16.253 L 21.005 16.253 M 16.252 11.5 L 21.005 16.253 L 16.252 21.005" fill="none" stroke-width="1.358" stroke="rgba(255,255,255,0.8)" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray=""></path></g></svg></button>
-            <p class="priv">Seus dados são usados apenas para processos seletivos da V4 Lima &amp; Co.</p>
+            <p class="priv">Seus dados são usados apenas para processos seletivos da V4 Lima &amp; Co. <a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a></p>
           </div>
 
           <div id="step2" class="af" hidden>
             <div id="qs" class="af"></div>
-            <label class="check" for="lgpd"><input type="checkbox" id="lgpd" name="lgpd" required> Autorizo o uso dos meus dados pela V4 Lima &amp; Co para fins de recrutamento, conforme a LGPD.</label>
+            <label class="check" for="lgpd"><input type="checkbox" id="lgpd" name="lgpd" required><span>Li a <a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a> e autorizo o uso dos meus dados pela V4 Lima &amp; Co para fins de recrutamento, conforme a LGPD.</span></label>
             <div class="hp" aria-hidden="true"><label for="site_empresa">Não preencha este campo</label><input id="site_empresa" name="site_empresa" tabindex="-1" autocomplete="off"></div>
             <p class="err" id="err2" hidden></p>
             <div class="row2"><button type="button" class="btn-ghost" id="prev">Voltar</button><button type="submit" class="btn" id="send">Enviar inscrição</button></div>
@@ -525,6 +526,7 @@ $("form").addEventListener("submit", async e => {
     try{
       const r = await fetch(CONFIG.inscricaoUrl, { method:"POST", headers:{"Content-Type":"text/plain;charset=utf-8"}, body:JSON.stringify(data) });
       const resp = await r.json().catch(()=>({ok:false, erro:"resposta inválida"}));
+      if(resp.motivo){ s.disabled = false; s.textContent = "Enviar inscrição"; return erro(2, resp.motivo); }
       if(!r.ok || resp.ok === false) throw new Error(resp.erro || r.status);
     }catch(x){
       s.disabled = false; s.textContent = "Enviar inscrição";
