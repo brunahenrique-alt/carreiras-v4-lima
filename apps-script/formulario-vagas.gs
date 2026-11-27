@@ -131,8 +131,8 @@ const PAINEL_HTML = `<!DOCTYPE html>
 
   <h3>Janela salarial <small>(não aparece no site)</small></h3>
   <p class="dica">Quem pedir uma pretensão fora dessa faixa entra na aba Inscrições como "Desclassificado: pretensão fora da faixa". Deixe em branco para não filtrar.</p>
-  <label for="c21">Pretensão mínima <small>(ex.: 3000)</small></label><input type="text" id="c21" name="Pretensão mínima" inputmode="decimal">
-  <label for="c22">Pretensão máxima <small>(ex.: 5000)</small></label><input type="text" id="c22" name="Pretensão máxima" inputmode="decimal">
+  <label for="c21">Pretensão mínima</label><input type="text" id="c21" name="Pretensão mínima" list="faixas" placeholder="Escolha ou digite">
+  <label for="c22">Pretensão máxima</label><input type="text" id="c22" name="Pretensão máxima" list="faixas" placeholder="Escolha ou digite"><datalist id="faixas"><option value="R$ 1.500"><option value="R$ 2.000"><option value="R$ 2.500"><option value="R$ 3.000"><option value="R$ 3.500"><option value="R$ 4.000"><option value="R$ 4.500"><option value="R$ 5.000"><option value="R$ 6.000"><option value="R$ 7.000"><option value="R$ 8.000"><option value="R$ 10.000"><option value="R$ 12.000"><option value="R$ 15.000"></datalist>
 
   <h3>Inscrição e publicação</h3>
   <label for="c17">Perguntas da inscrição <small>(uma por linha, aparecem na 2ª etapa do formulário)</small></label><textarea id="c17" name="Perguntas da inscrição"></textarea>
