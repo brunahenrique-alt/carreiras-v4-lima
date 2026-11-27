@@ -409,6 +409,8 @@ const EXEMPLO = [
 ];
 
 const norm = s => String(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").trim().toLowerCase();
+/* Nome de coluna: ignora acentos, maiúsculas, espaços extras e pontuação no fim (ex.: "Principais responsabilidades:") */
+const col = s => norm(s).replace(/[^a-z0-9]+$/,"").replace(/\s+/g," ").replace(/^principais responsabilidades$/,"responsabilidades");
 const esc = s => String(s||"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const slug = s => norm(s).replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
 const lista = s => String(s||"").split(/\n|;/).map(x=>x.replace(/^[-•*\s]+/,"").trim()).filter(Boolean);
@@ -416,7 +418,7 @@ const linhas = s => String(s||"").split("\n").map(x=>x.replace(/^[-•*\s]+/,"")
 
 /* Lê uma linha da aba "Vagas". Aceita nomes de coluna com ou sem acento. */
 function toJob(r){
-  const g = k => { const key = Object.keys(r).find(x => norm(x)===k); return key ? String(r[key]).trim() : ""; };
+  const g = k => { const key = Object.keys(r).find(x => col(x)===k); return key ? String(r[key]).trim() : ""; };
   const titulo = g("vaga");
   return { id:slug(titulo), titulo, nivel:g("nivel"), modelo:g("modelo"), local:g("local"), endereco:g("endereco"),
     desc:g("descricao"), resp:lista(g("responsabilidades")), req:lista(g("requisitos")), dif:lista(g("diferenciais")),
