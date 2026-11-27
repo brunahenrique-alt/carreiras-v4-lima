@@ -441,9 +441,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="fld"><label for="linkedin">LinkedIn <i>*</i></label><input type="text" id="linkedin" name="linkedin" inputmode="url" autocomplete="url" placeholder="linkedin.com/in/seu-perfil" required>
               <span class="help"><a href="https://www.linkedin.com/in/" target="_blank" rel="noopener">Obtenha o link do seu perfil do LinkedIn</a> e cole no campo acima.</span></div>
             <div class="fld"><span class="lbl" id="cv-lbl">Currículo <i>*</i></span>
-              <label class="upload" id="cv-btn"><input type="file" id="cv" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" aria-labelledby="cv-lbl">+ Anexar currículo</label>
+              <label class="upload" id="cv-btn"><input type="file" id="cv" accept=".pdf,application/pdf" aria-labelledby="cv-lbl">+ Anexar currículo</label>
               <div class="file-chip" id="cv-chip" hidden><span id="cv-name"></span><button type="button" id="cv-rm">Remover</button></div>
-              <span class="help">PDF ou Word, até 5 MB.</span></div>
+              <span class="help">Somente PDF, até 5 MB.</span></div>
             <div class="fld"><label for="pretensao">Pretensão salarial <i>*</i></label><input type="text" id="pretensao" name="pretensao" inputmode="numeric" placeholder="R$ 0.000,00" required></div>
             <p class="err" id="err1" hidden></p>
             <button type="button" class="btn" id="next">Continuar inscrição <span class="seta"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span></button>
@@ -683,7 +683,7 @@ $("cv").addEventListener("change", e => {
   const f = e.target.files[0]; e.target.value = "";
   $("err1").hidden = true;
   if(!f) return;
-  if(!/\.(pdf|docx?)$/i.test(f.name)){ return erro(1, "Envie o currículo em PDF ou Word."); }
+  if(!/\.pdf$/i.test(f.name)){ e.target.value = ""; return erro(1, "Envie o currículo em PDF. Se ele estiver em Word, salve como PDF antes de anexar."); }
   if(f.size > MAX){ return erro(1, "O currículo precisa ter até 5 MB."); }
   const rd = new FileReader();
   rd.onload = () => { CV = { nome:f.name, tipo:f.type || "application/octet-stream", base64:String(rd.result).split(",")[1] };

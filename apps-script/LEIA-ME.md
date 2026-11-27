@@ -15,3 +15,11 @@ O que a posição oferece e Sobre a empresa.
 
 O site lê todas as colunas da aba Vagas pelo `doGet`, então essas mudanças não
 exigem nova implantação do app da web.
+
+## Triagem salarial e currículo (27/11/2026)
+
+- `triagem-salarial.gs`: funções coladas no `Código.gs` (antes de `json`). O `doPost`
+  chama `situacaoPretensao(dados)` e grava as colunas "Situação" e "Faixa da vaga"
+  na aba Inscrições.
+- O currículo passou a aceitar somente PDF (no site e na validação do `doPost`).
+- Mudanças no `doPost` exigem publicar uma nova versão da implantação do app da web.

@@ -129,6 +129,11 @@ const PAINEL_HTML = `<!DOCTYPE html>
   <p class="dica">"O que oferecemos" é igual em todas as vagas e já aparece no site automaticamente.</p>
   <label for="c16">Sobre a empresa <small>(cada linha vira um parágrafo)</small></label><textarea class="alto" id="c16" name="Sobre a empresa"></textarea>
 
+  <h3>Janela salarial <small>(não aparece no site)</small></h3>
+  <p class="dica">Quem pedir uma pretensão fora dessa faixa entra na aba Inscrições como "Desclassificado: pretensão fora da faixa". Deixe em branco para não filtrar.</p>
+  <label for="c21">Pretensão mínima <small>(ex.: 3000)</small></label><input type="text" id="c21" name="Pretensão mínima" inputmode="decimal">
+  <label for="c22">Pretensão máxima <small>(ex.: 5000)</small></label><input type="text" id="c22" name="Pretensão máxima" inputmode="decimal">
+
   <h3>Inscrição e publicação</h3>
   <label for="c17">Perguntas da inscrição <small>(uma por linha, aparecem na 2ª etapa do formulário)</small></label><textarea id="c17" name="Perguntas da inscrição"></textarea>
   <label for="c18">Status</label><select id="c18" name="Status"><option>Aberta</option><option>Fechada</option></select>
@@ -142,7 +147,7 @@ const PAINEL_HTML = `<!DOCTYPE html>
   var f = document.getElementById('f');
   var campos = ['Vaga','Nível','Modelo','Local','Endereço','Descrição','Ambiente de trabalho','Missão','Responsabilidades','Requisitos','Diferenciais',
     'Contratação','Remuneração','Horário','Benefícios','Outras informações','Sobre a empresa',
-    'Perguntas da inscrição','Status'];
+    'Pretensão mínima','Pretensão máxima','Perguntas da inscrição','Status'];
   function preencher(d) {
     Object.keys(d).forEach(function (k) {
       var el = f.elements[k]; if (!el) return;
