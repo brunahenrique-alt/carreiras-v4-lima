@@ -23,3 +23,5 @@ exigem nova implantação do app da web.
   na aba Inscrições.
 - O currículo passou a aceitar somente PDF (no site e na validação do `doPost`).
 - Mudanças no `doPost` exigem publicar uma nova versão da implantação do app da web.
+- O `doGet` não envia as colunas "Pretensão mínima" e "Pretensão máxima" para o site
+  (constante `COLUNAS_INTERNAS`), para a faixa não ficar pública.
