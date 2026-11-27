@@ -499,6 +499,17 @@ const SOBRE_EMPRESA_PADRAO = [
   "Nossa jornada continua, queremos elevar a V4 Company a novos patamares, e sabemos que isso só acontece com profissionais excepcionais ao nosso lado."
 ].join("\n");
 
+/* "O que oferecemos": igual em todas as vagas (não vem da planilha) */
+const OFERECEMOS = [
+  "Staage: plataforma com mais de 60 cursos.",
+  "Qulture Rocks: plataforma de desenvolvimento, feedbacks e desenvolvimento do escopo.",
+  "Growth Leaders Academy: trilhas de formação e desenvolvimento de lideranças.",
+  "Reservatório de Dopamina: curadoria de conteúdos para o seu desenvolvimento contínuo.",
+  "OnHappy: até 50% de desconto em pacotes de viagem.",
+  "Parcerias Universitárias: bolsas e descontos em graduação e pós em universidades parceiras, com opções para você escolher.",
+  "English Pass: aulas de inglês personalizadas, com IA e um dependente gratuito."
+];
+
 /* Etapas do processo, iguais para todas as vagas */
 const ETAPAS = ["Inscrição por esta página, em menos de 10 minutos","Conversa com o time de People","Entrevista com a liderança, com uma simulação prática da rotina","Proposta, com retorno em todas as etapas"];
 
@@ -601,7 +612,7 @@ function render(j, manterForm){
   if(j.dif.length) b += sec("Diferenciais que valorizamos", ul(j.dif));
   const infos = informacoes(j);
   if(infos.length && j.id!==BANCO.id) b += sec("Informações da vaga", dl(infos));
-  if(j.oferece.length) b += sec("O que oferecemos", ulRot(j.oferece));
+  if(j.id!==BANCO.id) b += sec("O que oferecemos", ulRot(OFERECEMOS));
   b += sec("Etapas do processo", ul(ETAPAS));
   $("j-body").innerHTML = b;
   $("about-txt").innerHTML = paras(j.sobre || SOBRE_EMPRESA_PADRAO);

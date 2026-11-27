@@ -13,15 +13,6 @@ const PADRAO_VAGA = {
     'Somos guiados por atitudes claras e transparentes em nossa rotina, que nos permitem fazer o máximo para nossos clientes. Trabalhamos de forma colaborativa, confiando nas pessoas que estão ao nosso lado.',
     'Aqui ninguém é empregado de ninguém. O ambiente é o mais horizontal possível, proporcionando autonomia para que você tome as melhores decisões dentro das suas responsabilidades. Não espere pelos outros aquilo que você pode fazer por si mesmo.'
   ].join('\n'),
-  'O que a posição oferece': [
-    'Staage: plataforma com mais de 60 cursos.',
-    'Qulture Rocks: plataforma de desenvolvimento, feedbacks e desenvolvimento do escopo.',
-    'Growth Leaders Academy: trilhas de formação e desenvolvimento de lideranças.',
-    'Reservatório de Dopamina: curadoria de conteúdos para o seu desenvolvimento contínuo.',
-    'OnHappy: até 50% de desconto em pacotes de viagem.',
-    'Parcerias Universitárias: bolsas e descontos em graduação e pós em universidades parceiras, com opções para você escolher.',
-    'English Pass: aulas de inglês personalizadas, com IA e um dependente gratuito.'
-  ].join('\n'),
   'Sobre a empresa': [
     'Há 13 anos, lideramos o caminho no Marketing Digital, sempre em busca de inovação, nos tornando a maior assessoria de marketing digital do país. Nosso foco é na geração de vendas e na transformação da realidade de milhares de empreendedores, dentro e fora do Brasil. Existimos para vender o seu produto, vender mais vezes, vender para mais pessoas e vender pelo maior valor.',
     'Estruturados em um sistema de franquias, temos mais de 250 escritórios no Brasil, mais de 6.000 clientes ativos e reunimos mais de 3.500 profissionais e mais de 300 sócios, entre Matriz e Franqueados.',
@@ -134,8 +125,8 @@ const PAINEL_HTML = `<!DOCTYPE html>
   <label for="c13">Benefícios <small>(opcional, resumo em uma linha)</small></label><input type="text" id="c13" name="Benefícios">
   <label for="c14">Outras informações <small>(uma por linha, no formato Rótulo: texto)</small></label><textarea id="c14" name="Outras informações" placeholder="Requisito: notebook próprio"></textarea>
 
-  <h3>O que oferecemos</h3>
-  <label for="c15">O que oferecemos <small>(um por linha, no formato Nome: descrição)</small></label><textarea id="c15" name="O que a posição oferece"></textarea>
+  <h3>Sobre a empresa</h3>
+  <p class="dica">"O que oferecemos" é igual em todas as vagas e já aparece no site automaticamente.</p>
   <label for="c16">Sobre a empresa <small>(cada linha vira um parágrafo)</small></label><textarea class="alto" id="c16" name="Sobre a empresa"></textarea>
 
   <h3>Inscrição e publicação</h3>
@@ -150,7 +141,7 @@ const PAINEL_HTML = `<!DOCTYPE html>
   var SITE = 'https://carreiras.v4lima.com/vaga.html?v=';
   var f = document.getElementById('f');
   var campos = ['Vaga','Nível','Modelo','Local','Endereço','Descrição','Ambiente de trabalho','Missão','Responsabilidades','Requisitos','Diferenciais',
-    'Contratação','Remuneração','Horário','Benefícios','Outras informações','O que a posição oferece','Sobre a empresa',
+    'Contratação','Remuneração','Horário','Benefícios','Outras informações','Sobre a empresa',
     'Perguntas da inscrição','Status'];
   function preencher(d) {
     Object.keys(d).forEach(function (k) {
