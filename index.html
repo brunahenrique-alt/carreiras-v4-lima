@@ -245,8 +245,43 @@
 </style>
 <!-- Microsoft Clarity -->
 <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "x7h3zlx0bc");</script>
+<!-- Google Tag Manager (contêiner da V4 Lima, o mesmo de v4lima.com) -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MZF9ZXPW');</script>
+<!-- End Google Tag Manager -->
+<!-- Origem da visita: guarda UTMs, gclid e fbclid por 30 dias para enviar junto com a inscrição -->
+<script>
+(function(){
+  var K = "v4lima_origem", P = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","gclid","fbclid"];
+  try{
+    var q = new URLSearchParams(location.search), novo = {}, tem = false;
+    P.forEach(function(k){ var v = q.get(k); if(v){ novo[k] = v.slice(0,200); tem = true; } });
+    var salvo = JSON.parse(localStorage.getItem(K) || "null");
+    if(salvo && Date.now() - salvo.ts > 30*864e5) salvo = null;
+    var ref = document.referrer && document.referrer.indexOf(location.host) < 0 ? document.referrer.slice(0,300) : "";
+    if(tem || !salvo){
+      novo.pagina_entrada = (location.pathname + location.search).slice(0,300);
+      novo.referrer = ref; novo.ts = Date.now();
+      localStorage.setItem(K, JSON.stringify(novo));
+    }
+  }catch(e){}
+  window.v4Origem = function(){
+    try{ var o = JSON.parse(localStorage.getItem(K) || "{}"), r = {};
+      P.concat(["pagina_entrada","referrer"]).forEach(function(k){ r[k] = o[k] || ""; }); return r;
+    }catch(e){ return {}; }
+  };
+})();
+</script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZF9ZXPW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <div class="proto" id="proto">Protótipo: vagas ilustrativas e perguntas do formulário provisórias</div>
 
 <nav class="nav" aria-label="Principal">
@@ -547,6 +582,12 @@ function montar(raw){
   salvarCache(raw);
   if(JSON.stringify(raw) !== JSON.stringify(cache)) montar(raw);
 })();
+/* Evento para o GTM: clique em uma vaga da lista */
+document.addEventListener("click", e => {
+  const a = e.target.closest && e.target.closest('a[href^="vaga.html"]'); if(!a) return;
+  const t = a.querySelector("h3, .jt, b, strong");
+  (window.dataLayer = window.dataLayer || []).push({ event:"vaga_click", vaga:(t ? t.textContent : a.textContent).trim().slice(0,120) });
+});
 </script>
 </body>
 </html>

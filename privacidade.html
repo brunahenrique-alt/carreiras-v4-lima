@@ -238,8 +238,45 @@
   .doc strong{color:var(--ink);font-weight:600}
   .doc .upd{font:400 14px/20px var(--mono);color:var(--ink-muted)}
 </style>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "x7h3zlx0bc");</script>
+<!-- Google Tag Manager (contêiner da V4 Lima, o mesmo de v4lima.com) -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MZF9ZXPW');</script>
+<!-- End Google Tag Manager -->
+<!-- Origem da visita: guarda UTMs, gclid e fbclid por 30 dias para enviar junto com a inscrição -->
+<script>
+(function(){
+  var K = "v4lima_origem", P = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","gclid","fbclid"];
+  try{
+    var q = new URLSearchParams(location.search), novo = {}, tem = false;
+    P.forEach(function(k){ var v = q.get(k); if(v){ novo[k] = v.slice(0,200); tem = true; } });
+    var salvo = JSON.parse(localStorage.getItem(K) || "null");
+    if(salvo && Date.now() - salvo.ts > 30*864e5) salvo = null;
+    var ref = document.referrer && document.referrer.indexOf(location.host) < 0 ? document.referrer.slice(0,300) : "";
+    if(tem || !salvo){
+      novo.pagina_entrada = (location.pathname + location.search).slice(0,300);
+      novo.referrer = ref; novo.ts = Date.now();
+      localStorage.setItem(K, JSON.stringify(novo));
+    }
+  }catch(e){}
+  window.v4Origem = function(){
+    try{ var o = JSON.parse(localStorage.getItem(K) || "{}"), r = {};
+      P.concat(["pagina_entrada","referrer"]).forEach(function(k){ r[k] = o[k] || ""; }); return r;
+    }catch(e){ return {}; }
+  };
+})();
+</script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZF9ZXPW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <nav class="nav" aria-label="Principal">
   <div class="wrap">
     <a class="brand" href="index.html#topo" aria-label="V4 Lima &amp; Co, início"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 24" width="26" height="24" aria-hidden="true"><g><path d="M 21.95 2.417 L 21.95 12.332 L 18.957 12.332 C 18.857 12.332 18.807 12.332 18.807 12.184 L 18.807 2.565 C 18.807 2.318 18.658 2.17 18.408 2.17 L 15.365 2.17 C 15.215 2.17 15.166 2.22 15.066 2.318 L 13.419 3.946 L 5.039 12.233 C 4.889 12.381 4.839 12.529 4.839 12.726 L 4.839 15.834 C 4.839 15.982 4.889 16.031 5.039 16.031 L 15.315 16.031 L 15.315 19.238 C 15.315 19.385 15.315 19.385 15.465 19.385 C 16.512 19.385 17.61 19.336 18.658 19.336 C 18.807 19.336 18.807 19.336 18.807 19.188 C 18.807 18.202 18.807 17.215 18.757 16.229 C 18.757 16.081 18.757 16.031 18.957 16.031 L 22 16.031 L 22 19.583 C 22 19.682 21.95 19.83 21.95 19.928 C 21.751 21.112 20.653 22 19.456 22 L 2.594 22 C 2.321 21.999 2.051 21.949 1.796 21.852 C 0.748 21.506 0.05 20.52 0.05 19.386 L 0.05 14.995 C 0 10.852 0 6.758 0 2.614 L 0 2.269 C 0.15 1.184 0.948 0.345 1.995 0.099 C 2.145 0.049 2.295 0.049 2.444 0 L 2.444 9.57 C 2.444 9.668 2.494 9.767 2.594 9.865 C 3.143 10.359 3.642 10.901 4.19 11.444 C 4.34 11.592 4.34 11.592 4.49 11.444 C 6.385 9.57 8.281 7.695 10.227 5.821 C 11.424 4.637 12.571 3.453 13.769 2.269 C 13.819 2.22 13.819 2.17 13.868 2.121 L 10.825 2.121 C 10.726 2.121 10.626 2.17 10.576 2.22 C 10.227 2.417 9.977 2.713 9.728 2.96 L 4.939 7.695 L 4.839 7.794 C 4.839 7.646 4.789 7.547 4.789 7.448 L 4.789 3.453 C 4.789 2.565 4.789 1.726 4.739 0.838 L 4.739 0.099 C 4.789 0.049 4.789 0 4.889 0 L 19.256 0 C 19.406 0 19.555 0 19.705 0.049 C 20.753 0.197 21.601 0.937 21.85 1.924 C 21.9 2.071 21.9 2.269 21.95 2.417 Z" fill="#ffffff"></path><path d="M 15.356 12.374 L 9.969 12.374 C 10.019 12.226 15.107 7.195 15.406 7.047 C 15.356 8.823 15.356 10.599 15.356 12.374 Z" fill="#ffffff"></path></g></svg><span class="unit">Lima &amp; Co</span></a>
@@ -257,7 +294,7 @@
   <div class="wrap">
     <span class="eyebrow">Candidatos</span>
     <h1>Política de Privacidade do processo seletivo</h1>
-    <p class="upd">Última atualização: 29 de setembro de 2026</p>
+    <p class="upd">Última atualização: 27 de novembro de 2026</p>
     <p>Esta política explica como a V4 Lima &amp; Co, unidade da V4 Company no Rio de Janeiro, trata os dados pessoais de quem se candidata às nossas vagas por esta página, de acordo com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018).</p>
 
     <h2>Quais dados coletamos</h2>
@@ -266,6 +303,7 @@
       <li>Dados profissionais: link do perfil no LinkedIn, currículo e pretensão salarial.</li>
       <li>As respostas que você envia às perguntas da inscrição.</li>
       <li>A vaga escolhida e a data e hora do envio.</li>
+      <li>A origem da sua visita, como o anúncio ou link que trouxe você até esta página (parâmetros UTM e identificadores de clique do Google e da Meta).</li>
     </ul>
     <p>Não pedimos dados sensíveis, como origem racial, religião, saúde ou orientação sexual. Pedimos que você não inclua esse tipo de informação no currículo ou nas respostas.</p>
 
@@ -276,6 +314,10 @@
       <li>Considerar o seu perfil em vagas futuras, quando você se cadastra no banco de talentos.</li>
     </ul>
     <p>Não usamos os seus dados para fins de marketing e não vendemos dados a terceiros.</p>
+
+    <h2>Cookies e ferramentas de medição</h2>
+    <p>Esta página usa ferramentas de medição e de anúncios, como Google Tag Manager, Google Analytics, Microsoft Clarity e pixels de plataformas de anúncios. Elas usam cookies e registram dados de navegação, como páginas visitadas, cliques e a origem da visita, para entendermos como as pessoas chegam às vagas e melhorarmos a página e as nossas campanhas de recrutamento.</p>
+    <p>Essas ferramentas não recebem o seu nome, e-mail, telefone, currículo ou respostas. Você pode bloquear ou apagar cookies nas configurações do seu navegador.</p>
 
     <h2>Base legal</h2>
     <p>Tratamos os seus dados com base no seu consentimento, dado ao marcar a autorização no formulário, e na realização de procedimentos preliminares a uma possível contratação, que você mesmo solicitou ao se candidatar.</p>
