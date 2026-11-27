@@ -42,6 +42,7 @@ function abrirPainel(linha) {
   const t = HtmlService.createTemplate(PAINEL_HTML);
   t.dados = JSON.stringify(dados).replace(/</g, '\\u003c');
   t.linha = linha || 0;
+  t.colunas = JSON.stringify(cabecalho).replace(/</g, '\\u003c');
   SpreadsheetApp.getUi().showSidebar(t.evaluate().setTitle(linha ? 'Editar vaga' : 'Nova vaga'));
 }
 
@@ -49,15 +50,7 @@ function salvarVaga(dados, linha) {
   const aba = SpreadsheetApp.getActive().getSheetByName(ABA_VAGAS);
   let cabecalho = aba.getRange(1, 1, 1, aba.getLastColumn()).getValues()[0];
 
-  // Cria na aba Vagas as colunas que ainda não existem (ex.: Remuneração, Horário)
-  const novas = Object.keys(dados).filter(h => cabecalho.indexOf(h) === -1);
-  if (novas.length) {
-    const ini = cabecalho.length + 1, fim = cabecalho.length + novas.length;
-    if (aba.getMaxColumns() < fim) aba.insertColumnsAfter(aba.getMaxColumns(), fim - aba.getMaxColumns());
-    aba.getRange(1, ini, 1, novas.length).setValues([novas]);
-    aba.getRange(1, 1).copyFormatToRange(aba, ini, fim, 1, 1);
-    cabecalho = cabecalho.concat(novas);
-  }
+  // Só grava nas colunas que existem na aba Vagas (coluna apagada não volta)
 
   // Evita duas vagas abertas com o mesmo nome (as duas teriam o mesmo link no site)
   const id = slugVaga(dados['Vaga']);
@@ -142,12 +135,21 @@ const PAINEL_HTML = `<!DOCTYPE html>
   <div id="msg"></div>
 </form>
 <script>
-  var dados = <?!= dados ?>, linha = <?!= linha ?>;
+  var dados = <?!= dados ?>, linha = <?!= linha ?>, colunas = <?!= colunas ?>;
   var SITE = 'https://carreiras.v4lima.com/vaga.html?v=';
   var f = document.getElementById('f');
   var campos = ['Vaga','Nível','Modelo','Local','Endereço','Descrição','Ambiente de trabalho','Missão','Responsabilidades','Requisitos','Diferenciais',
     'Contratação','Remuneração','Horário','Benefícios','Outras informações','Sobre a empresa',
     'Pretensão mínima','Pretensão máxima','Perguntas da inscrição','Status'];
+  /* Campo cuja coluna não existe na aba Vagas fica escondido e não é salvo */
+  campos = campos.filter(function (k) {
+    if (colunas.indexOf(k) !== -1) return true;
+    var el = f.elements[k]; if (!el) return false;
+    el.style.display = 'none';
+    var lb = document.querySelector('label[for="' + el.id + '"]'); if (lb) lb.style.display = 'none';
+    return false;
+  });
+  if (colunas.indexOf('Destaque') === -1) f.elements['Destaque'].parentNode.style.display = 'none';
   function preencher(d) {
     Object.keys(d).forEach(function (k) {
       var el = f.elements[k]; if (!el) return;
@@ -161,7 +163,7 @@ const PAINEL_HTML = `<!DOCTYPE html>
     e.preventDefault();
     var o = {};
     campos.forEach(function (k) { o[k] = f.elements[k].value.trim(); });
-    o['Destaque'] = f.elements['Destaque'].checked ? 'Sim' : 'Não';
+    if (colunas.indexOf('Destaque') !== -1) o['Destaque'] = f.elements['Destaque'].checked ? 'Sim' : 'Não';
     if (!o['Vaga']) { msg('Preencha o nome da vaga.', 'erro'); f.elements['Vaga'].focus(); return; }
     var b = document.getElementById('b'), txt = b.textContent;
     b.disabled = true; b.textContent = 'Salvando...';
