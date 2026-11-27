@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Carreiras | V4 Lima &amp; Co</title>
-<meta name="description" content="Vagas na V4 Lima & Co, unidade JVP da V4 Company no Rio de Janeiro. Acelere a sua carreira em vendas.">
+<meta name="description" content="Trabalhe na V4 Lima & Co, unidade da V4 Company no Centro do Rio. Cresça pelo resultado que entrega, aprendendo com quem foi de BDR a sócio.">
 <meta property="og:title" content="Carreiras | V4 Lima &amp; Co">
-<meta property="og:description" content="Vagas na V4 Lima & Co, unidade JVP da V4 Company no Rio de Janeiro. Acelere a sua carreira em vendas.">
+<meta property="og:description" content="Trabalhe na V4 Lima & Co, unidade da V4 Company no Centro do Rio. Cresça pelo resultado que entrega, aprendendo com quem foi de BDR a sócio.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#000000">
 <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAOVBMVEVMaXHlCRTmBxX////mFiHmCRTkBxTmCRTlCBT96+zlCRTyhIn2o6bvZm3pKzX50dLsSFD4vL/zk5iZ4xvAAAAACnRSTlMAn2///sIq33/3gxiRowAAAAlwSFlzAAALEwAACxMBAJqcGAAAAOhJREFUeNrl1ssOgyAQQFEtLxkQsf//sUWBWnUYsIumae9uNCeKxkjXfXeD0CGrqMQgNyA5AAtZoFNPIxW0EeCZ9NBKYEhEIIQbu+QBRrPm1sMiEXUmTi8zmzgYFovnVJGcRY0gokIwQRNUkCQJvRcUycLtBUHyXR1FmeDroAgmZpJMiBg9SRgioIEcRAM5CoLogoCxSOLDOguCrAYRFAkGEyQBhwmaACYqxLNa+n0i2gn7ZcINUvoq5zgdCVp6lfc4XSH2T4nz3oX4jvTQXP5XynbSd1cvs+0VWo142ZF08jZUu8lPbqseUSU5DJz2rZYAAAAASUVORK5CYII=">
@@ -243,8 +243,45 @@
   @media (max-width:480px){.steps{grid-template-columns:1fr}}
 
 </style>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "x7h3zlx0bc");</script>
+<!-- Google Tag Manager (contêiner da V4 Lima, o mesmo de v4lima.com) -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MZF9ZXPW');</script>
+<!-- End Google Tag Manager -->
+<!-- Origem da visita: guarda UTMs, gclid e fbclid por 30 dias para enviar junto com a inscrição -->
+<script>
+(function(){
+  var K = "v4lima_origem", P = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","gclid","fbclid"];
+  try{
+    var q = new URLSearchParams(location.search), novo = {}, tem = false;
+    P.forEach(function(k){ var v = q.get(k); if(v){ novo[k] = v.slice(0,200); tem = true; } });
+    var salvo = JSON.parse(localStorage.getItem(K) || "null");
+    if(salvo && Date.now() - salvo.ts > 30*864e5) salvo = null;
+    var ref = document.referrer && document.referrer.indexOf(location.host) < 0 ? document.referrer.slice(0,300) : "";
+    if(tem || !salvo){
+      novo.pagina_entrada = (location.pathname + location.search).slice(0,300);
+      novo.referrer = ref; novo.ts = Date.now();
+      localStorage.setItem(K, JSON.stringify(novo));
+    }
+  }catch(e){}
+  window.v4Origem = function(){
+    try{ var o = JSON.parse(localStorage.getItem(K) || "{}"), r = {};
+      P.concat(["pagina_entrada","referrer"]).forEach(function(k){ r[k] = o[k] || ""; }); return r;
+    }catch(e){ return {}; }
+  };
+})();
+</script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZF9ZXPW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <div class="proto" id="proto">Protótipo: vagas ilustrativas e perguntas do formulário provisórias</div>
 
 <nav class="nav" aria-label="Principal">
@@ -264,9 +301,9 @@
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-text">
-        <span class="eyebrow">Para quem quer acelerar a carreira em vendas no Rio</span>
-        <h1 class="display-hero">Aqui se forma a <span class="hl">elite comercial da V4.</span></h1>
-        <p class="lead">Na V4 Lima &amp; Co você tem metas claras, acompanhamento de perto e um plano de carreira que a nossa própria liderança já percorreu.</p>
+        <span class="eyebrow">Carreiras na V4 Lima &amp; Co · Centro do Rio</span>
+        <h1 class="display-hero">Para quem quer crescer <span class="hl">pelo resultado que entrega.</span></h1>
+        <p class="lead">Aprenda de perto com quem começou como BDR e chegou a sócio. Aqui você tem metas claras, acompanhamento próximo e espaço real para crescer.</p>
         <div class="ctas">
           <a class="btn" href="#vagas">Ver vagas abertas <svg class="arr" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.589 32.589"><g><path d="M 16.294 32.589 C 7.295 32.589 0 25.294 0 16.294 L 0 16.294 C 0 7.295 7.295 0 16.294 0 L 16.294 0 C 25.294 0 32.589 7.295 32.589 16.294 L 32.589 16.294 C 32.589 25.294 25.294 32.589 16.294 32.589 Z" fill="rgba(255,255,255,0.1)"></path><path d="M 11.5 16.253 L 21.005 16.253 M 16.252 11.5 L 21.005 16.253 L 16.252 21.005" fill="none" stroke-width="1.358" stroke="rgba(255,255,255,0.8)" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray=""></path></g></svg></a>
           <a class="btn-ghost" href="#quem-somos">Conhecer a unidade</a>
@@ -282,10 +319,10 @@
       </div>
     </div>
     <div class="stats">
-      <div class="stat"><b>+R$ 16 Bi</b><span>Receita gerada para clientes da V4</span></div>
-      <div class="stat"><b>+13 anos</b><span>Profissionalizando marketing e vendas no Brasil</span></div>
-      <div class="stat"><b>4 etapas</b><span>De BDR a sócio: o caminho que a nossa liderança fez</span></div>
-      <div class="stat"><b>2025</b><span>Ano de abertura da V4 Lima &amp; Co no Rio</span></div>
+      <div class="stat"><b>R$ 719 mi</b><span>Faturamento aproximado da V4 Company no último ano</span></div>
+      <div class="stat"><b>+250</b><span>Escritórios da V4 pelo Brasil</span></div>
+      <div class="stat"><b>+6.000</b><span>Clientes ativos na rede</span></div>
+      <div class="stat"><b>+3.500</b><span>Profissionais entre matriz e franquias</span></div>
     </div>
   </div>
 </header>
@@ -298,29 +335,29 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Quem somos</span>
-      <h2 class="heading-xl">Uma plataforma para acelerar <span class="hl">negócios e carreiras.</span></h2>
+      <h2 class="heading-xl">A maior assessoria de marketing digital do país. <span class="hl">Uma unidade feita para formar gente.</span></h2>
     </div>
     <div class="about">
       <article>
         <span class="kicker">A rede · desde 2012</span>
         <h3>V4 Company</h3>
-        <p>Fundada em 2012, a V4 nasceu para ajudar empresas a vender mais, para mais pessoas, mais vezes e pelo maior valor. São esses os quatro Vs do nosso nome. Nosso foco é o que gera resultado de verdade: vendas.</p>
-        <p class="muted">Hoje somos um ecossistema de alta performance, com unidades em todo o Brasil e o IPO como próximo passo.</p>
+        <p>Há mais de 13 anos a V4 existe para fazer empresas venderem mais, para mais pessoas, mais vezes e pelo maior valor. São esses os quatro Vs do nosso nome. O foco é o que transforma a realidade de um negócio: vendas.</p>
+        <p class="muted">Em um sistema de franquias, somos mais de 250 escritórios, 6.000 clientes ativos, 3.500 profissionais e 300 sócios, dentro e fora do Brasil. O próximo passo é o IPO.</p>
       </article>
       <article class="us">
         <span class="kicker">A unidade · desde janeiro de 2025</span>
         <h3>V4 Lima &amp; Co</h3>
-        <p>Somos uma Joint Venture Partner (JVP), o modelo em que a própria matriz escolhe quem vai liderar a unidade e oferece treinamento e apoio exclusivos. A operação é liderada pelo sócio majoritário Caio Lima, com o sócio investidor Bruno Alfradique, da V4 Alfradique.</p>
-        <p class="muted">Nossa liderança foi formada dentro da V4 e passou por todas as etapas do time comercial antes de assumir a unidade.</p>
+        <p>Somos uma Joint Venture Partner (JVP) da V4 no Centro do Rio de Janeiro. Nesse modelo, a própria matriz escolhe quem lidera a unidade e oferece treinamento e apoio exclusivos. À frente da operação está o sócio majoritário Caio Lima, com o sócio investidor Bruno Alfradique, da V4 Alfradique.</p>
+        <p class="muted">O Caio entrou na V4 como BDR, foi promovido a closer, liderou o time de vendas batendo meta todos os meses e foi convidado pela diretoria para assumir a unidade.</p>
       </article>
     </div>
     <ol class="trail" aria-label="Trajetória da liderança dentro da V4">
-      <li><i>01</i><b>BDR</b><span>Prospecção de clientes</span></li>
-      <li><i>02</i><b>Closer outbound</b><span>Negociação e fechamento</span></li>
-      <li><i>03</i><b>Gestão de vendas</b><span>Todas as metas mensais batidas</span></li>
+      <li><i>01</i><b>BDR</b><span>Prospecção de novos clientes</span></li>
+      <li><i>02</i><b>Closer</b><span>Negociação e fechamento</span></li>
+      <li><i>03</i><b>Gestão de vendas</b><span>Meta batida todos os meses</span></li>
       <li><i>04</i><b>Sócio da JVP</b><span>Convite da diretoria para liderar a unidade no Rio</span></li>
     </ol>
-    <p class="trail-cap">Esse caminho é o plano de carreira que oferecemos a quem entra no time hoje.</p>
+    <p class="trail-cap">Esse é o plano de carreira de quem entra hoje. Aqui, crescer depende do resultado entregue, não do tempo de casa.</p>
     <div class="mission">
       <span class="eyebrow">Nossa missão</span>
       <blockquote>Bater todas as metas de maneira consistente e <b>fazer o certo, sempre.</b></blockquote>
@@ -332,18 +369,18 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Por que a V4 Lima &amp; Co</span>
-      <h2 class="heading-xl">Um lugar feito para quem quer <span class="hl">crescer rápido.</span></h2>
-      <p>Estrutura, método e o exemplo de quem já fez o caminho.</p>
+      <h2 class="heading-xl">Alta exigência, <span class="hl">crescimento de verdade.</span></h2>
+      <p>Uma operação orientada por performance, disciplina e desenvolvimento. É assim que o time trabalha e é assim que as pessoas sobem.</p>
     </div>
     <div class="diffs">
-      <div class="diff"><span class="kicker">Carreira</span><h3>Um plano de carreira já percorrido</h3><p>Nossa liderança começou como BDR. Aqui, o crescimento depende de entrega, e o caminho até a liderança é real.</p></div>
+      <div class="diff"><span class="kicker">Carreira</span><h3>Crescimento meritocrático</h3><p>Quem entrega resultado de forma consistente sobe. O caminho de BDR a sócio já foi feito aqui dentro e está aberto para quem chega.</p></div>
+      <div class="diff"><span class="kicker">Liderança</span><h3>Aprendizado direto com quem fez</h3><p>Você trabalha perto de quem construiu a carreira na própria operação comercial da V4 e se consolidou pelo resultado.</p></div>
       <div class="diff"><span class="kicker">Performance</span><h3>Metas claras, acompanhamento de perto</h3><p>Rituais de gestão, indicadores transparentes e feedback frequente. Você sabe onde está e o que precisa para subir.</p></div>
-      <div class="diff"><span class="kicker">Cultura</span><h3>Fazer o certo, sempre</h3><p>Seguimos o Red Book da V4 e um código de conduta próprio da unidade. O ambiente é profissional, respeitoso e focado no sucesso do cliente.</p></div>
-      <div class="diff"><span class="kicker">Aprendizado</span><h3>Formação contínua</h3><p>Acesso à Plataforma Growth Learning, aos playbooks de cada função e ao EMPS, o modelo de gestão que a V4 usa para construir unidades de alta performance.</p></div>
+      <div class="diff"><span class="kicker">Formação</span><h3>Método para aprender rápido</h3><p>Plataforma Growth Learning, playbooks de cada função, o EMPS, modelo de gestão das unidades de alta performance, e o Red Book, que guia a cultura da V4.</p></div>
     </div>
     <div class="stats ambition">
       <div class="stat"><b>Top 5</b><span>Nossa meta é estar entre as cinco maiores unidades da V4 nos próximos anos.</span></div>
-      <div class="stat"><b>IPO</b><span>E ser uma das unidades que vão levar a V4 Company ao IPO.</span></div>
+      <div class="stat"><b>IPO</b><span>E ser uma das unidades que vão levar a V4 Company à bolsa.</span></div>
     </div>
     <div class="sec-cta"><a class="btn" href="#vagas">Quero fazer parte <svg class="arr" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.589 32.589"><g><path d="M 16.294 32.589 C 7.295 32.589 0 25.294 0 16.294 L 0 16.294 C 0 7.295 7.295 0 16.294 0 L 16.294 0 C 25.294 0 32.589 7.295 32.589 16.294 L 32.589 16.294 C 32.589 25.294 25.294 32.589 16.294 32.589 Z" fill="rgba(255,255,255,0.1)"></path><path d="M 11.5 16.253 L 21.005 16.253 M 16.252 11.5 L 21.005 16.253 L 16.252 21.005" fill="none" stroke-width="1.358" stroke="rgba(255,255,255,0.8)" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray=""></path></g></svg></a></div>
   </div>
@@ -353,8 +390,8 @@
   <div class="wrap perks-grid">
     <div class="sec-head" style="margin:0">
       <span class="eyebrow">Benefícios</span>
-      <h2 class="heading-xl">Cuidado com você, <span class="hl">dentro e fora do trabalho.</span></h2>
-      <p>Saúde, bem-estar, idiomas, educação e ferramentas para você render mais.</p>
+      <h2 class="heading-xl">Benefícios para você render mais, <span class="hl">dentro e fora do trabalho.</span></h2>
+      <p>Saúde, bem-estar, idiomas, educação e ferramentas de trabalho. Os benefícios de cada vaga aparecem na página dela e podem variar conforme o formato de contratação.</p>
     </div>
     <ul class="checklist">
       <li>Starbem</li><li>TotalPass</li><li>English Pass</li><li>ChatGPT Pro</li><li>Onhappy</li><li>Staage</li><li>Parceria Mackenzie</li><li>Parceria Wyden</li><li>Descontos exclusivos V4</li>
@@ -366,8 +403,8 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Vagas abertas</span>
-      <h2 class="heading-xl">Comece pelo <span class="hl">time comercial.</span></h2>
-      <p>A maior parte das oportunidades está em pré-vendas, a porta de entrada da nossa trilha de carreira. Escolha uma vaga para ver os detalhes e se inscrever.</p>
+      <h2 class="heading-xl">Encontre a sua <span class="hl">próxima vaga.</span></h2>
+      <p>Hoje a maior parte das oportunidades está no time comercial, a porta de entrada da nossa trilha de carreira. Abra uma vaga para ver responsabilidades, perfil e remuneração, e se inscreva em poucos minutos.</p>
     </div>
     <div class="finder" role="search">
       <div class="ffld f-grow"><label for="f-nome">Nome da vaga</label><div class="fsearch"><input id="f-nome" type="text" placeholder="Pesquisar pelo nome da vaga" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></div></div>
@@ -387,9 +424,9 @@
     </div>
     <ol class="steps">
       <li><span class="k">01</span><h3>Inscrição</h3><p>Escolha a vaga, preencha seus dados e responda algumas perguntas. Leva menos de 10 minutos.</p></li>
-      <li><span class="k">02</span><h3>Conversa com People</h3><p>Um bate-papo para conhecer sua trajetória, seus objetivos e o que você busca.</p></li>
-      <li><span class="k">03</span><h3>Entrevista com a liderança</h3><p>Conversa com o gestor da área, com uma simulação prática da rotina da vaga.</p></li>
-      <li><span class="k">04</span><h3>Proposta</h3><p>Você recebe retorno em todas as etapas e, se fizer sentido para os dois lados, a nossa proposta.</p></li>
+      <li><span class="k">02</span><h3>Conversa com People</h3><p>Um bate-papo sobre a sua trajetória, seus objetivos e o que você busca.</p></li>
+      <li><span class="k">03</span><h3>Entrevista com a liderança</h3><p>Conversa com a liderança da área, com uma simulação prática da rotina da vaga.</p></li>
+      <li><span class="k">04</span><h3>Proposta</h3><p>Se fizer sentido para os dois lados, você recebe a proposta. E tem retorno em todas as etapas.</p></li>
     </ol>
   </div>
 </section>
@@ -401,8 +438,9 @@
       <h2 class="heading-lg">Tire suas dúvidas <span class="hl">antes de se inscrever.</span></h2>
     </div>
     <div class="faq">
-      <details><summary>Preciso ter experiência em vendas?</summary><p>Para as vagas de estágio e júnior, não. Buscamos ambição, disciplina e vontade de aprender. O resto a gente ensina.</p></details>
-      <details><summary>O trabalho é presencial?</summary><p>Depende da vaga. O modelo de trabalho (presencial, híbrido ou remoto) aparece na página de cada uma. A unidade fica no Rio de Janeiro.</p></details>
+      <details><summary>Preciso ter experiência em vendas?</summary><p>Para as vagas de entrada, como BDR e estágio, não. Experiência na área comercial ajuda, mas o que mais pesa é ambição, disciplina e vontade de aprender. O resto a gente ensina.</p></details>
+      <details><summary>O trabalho é presencial?</summary><p>A maior parte das vagas é presencial, no nosso escritório no Centro do Rio, perto da Candelária. O modelo de cada vaga aparece na página dela.</p></details>
+      <details><summary>Qual é o formato de contratação e a remuneração?</summary><p>Depende da vaga. O formato (CLT, PJ ou estágio), a remuneração e os benefícios aparecem em "Informações da vaga", na página de cada uma.</p></details>
       <details><summary>Posso me inscrever em mais de uma vaga?</summary><p>Pode. Faça uma inscrição para cada vaga que tiver a ver com o seu perfil.</p></details>
       <details><summary>Quanto tempo leva o processo?</summary><p>Em geral, algumas semanas entre a inscrição e a proposta. Você recebe retorno em todas as etapas, mesmo que não siga no processo.</p></details>
     </div>
@@ -421,10 +459,10 @@
 /* =====================================================================
    CONFIGURAÇÃO (a única parte que precisa ser preenchida)
    - vagasUrl: endereço de onde a página lê as vagas.
-       Pode ser o link de uma automação (Make, Power Automate) que lê a aba
-       "Vagas" do Excel da Juliana e devolve JSON, ou um CSV publicado.
-   - inscricaoUrl: endereço da automação que grava cada inscrição na aba
-       "Inscrições" do mesmo Excel.
+       É o app da web do Apps Script da planilha "LP Carreiras V4 Lima & Co",
+       que devolve a aba "Vagas" em JSON.
+   - inscricaoUrl: o mesmo app da web, que grava cada inscrição na aba
+       "Inscrições" da planilha.
    Enquanto estiverem vazios, a página usa as vagas de exemplo abaixo e
    não envia nada (modo protótipo).
    ===================================================================== */
@@ -464,6 +502,8 @@ const BANCO = { id:"banco-de-talentos", titulo:"Banco de talentos", nivel:"", mo
   desc:"Não encontrou a vaga ideal agora? Deixe seu cadastro. Quando surgir uma oportunidade com o seu perfil, o time de People entra em contato.", resp:[], req:[] };
 
 const norm = s => String(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").trim().toLowerCase();
+/* Nome de coluna: ignora acentos, maiúsculas, espaços extras e pontuação no fim (ex.: "Principais responsabilidades:") */
+const col = s => norm(s).replace(/[^a-z0-9]+$/,"").replace(/\s+/g," ").replace(/^principais responsabilidades$/,"responsabilidades");
 const esc = s => String(s||"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const slug = s => norm(s).replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
 const lista = s => String(s||"").split(/\n|;/).map(x=>x.replace(/^[-•\s]+/,"").trim()).filter(Boolean);
@@ -485,7 +525,7 @@ function parseCSV(t){
 
 /* Aceita nomes de coluna com ou sem acento. */
 function toJob(r){
-  const g = k => { const key = Object.keys(r).find(x => norm(x)===k); return key ? String(r[key]).trim() : ""; };
+  const g = k => { const key = Object.keys(r).find(x => col(x)===k); return key ? String(r[key]).trim() : ""; };
   const titulo = g("vaga");
   return { id:slug(titulo), titulo, nivel:g("nivel"), modelo:g("modelo"), local:g("local"), desc:g("descricao"),
            resp:lista(g("responsabilidades")), req:lista(g("requisitos")),
@@ -544,6 +584,12 @@ function montar(raw){
   salvarCache(raw);
   if(JSON.stringify(raw) !== JSON.stringify(cache)) montar(raw);
 })();
+/* Evento para o GTM: clique em uma vaga da lista */
+document.addEventListener("click", e => {
+  const a = e.target.closest && e.target.closest('a[href^="vaga.html"]'); if(!a) return;
+  const t = a.querySelector("h3, .jt, b, strong");
+  (window.dataLayer = window.dataLayer || []).push({ event:"vaga_click", vaga:(t ? t.textContent : a.textContent).trim().slice(0,120) });
+});
 </script>
 </body>
 </html>

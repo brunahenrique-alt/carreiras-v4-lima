@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Vaga | V4 Lima &amp; Co</title>
-<meta name="description" content="Vaga na V4 Lima &amp; Co, unidade JVP da V4 Company no Rio de Janeiro.">
+<meta name="description" content="Vaga na V4 Lima &amp; Co, unidade da V4 Company no Centro do Rio de Janeiro. Veja responsabilidades, perfil, remuneração e como se inscrever.">
 <meta name="theme-color" content="#000000">
 <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAOVBMVEVMaXHlCRTmBxX////mFiHmCRTkBxTmCRTlCBT96+zlCRTyhIn2o6bvZm3pKzX50dLsSFD4vL/zk5iZ4xvAAAAACnRSTlMAn2///sIq33/3gxiRowAAAAlwSFlzAAALEwAACxMBAJqcGAAAAOhJREFUeNrl1ssOgyAQQFEtLxkQsf//sUWBWnUYsIumae9uNCeKxkjXfXeD0CGrqMQgNyA5AAtZoFNPIxW0EeCZ9NBKYEhEIIQbu+QBRrPm1sMiEXUmTi8zmzgYFovnVJGcRY0gokIwQRNUkCQJvRcUycLtBUHyXR1FmeDroAgmZpJMiBg9SRgioIEcRAM5CoLogoCxSOLDOguCrAYRFAkGEyQBhwmaACYqxLNa+n0i2gn7ZcINUvoq5zgdCVp6lfc4XSH2T4nz3oX4jvTQXP5XynbSd1cvs+0VWo142ZF08jZUu8lPbqseUSU5DJz2rZYAAAAASUVORK5CYII=">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -169,13 +169,26 @@
   .jsec ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
   .jsec li{display:flex;gap:12px;align-items:flex-start;color:var(--ink-body);max-width:68ch}
   .jsec li::before{content:"";flex:none;width:13px;height:13px;margin-top:6px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath d='M 0 17 L 12 17 L 12 0' fill='none' stroke-width='5' stroke='%23e50914' transform='translate(6.354 0.646) rotate(45 6 8.5)'/%3E%3C/svg%3E") no-repeat center/contain}
+  .jsec li strong{font-weight:600;color:var(--ink)}
   .jsec ul.perks{display:flex;flex-wrap:wrap;gap:8px}
   .jsec ul.perks li{background:var(--tab-bg);color:var(--tab-text);border-radius:var(--radius-pill);padding:9px 16px;font:300 15px/1 var(--sans)}
   .jsec ul.perks li::before{display:none}
   .jsec a{color:var(--footer-link)}
+  .jsec .intro{display:grid;gap:14px}
+  .jsec .intro p{color:var(--ink-body)}
+  /* informações da vaga (modelo, local, contratação, remuneração...) */
+  .infos{margin:0;display:grid}
+  .infos div{display:grid;grid-template-columns:minmax(150px,210px) minmax(0,1fr);gap:16px;padding:13px 0;border-bottom:1px solid var(--divider)}
+  .infos div:first-child{padding-top:2px}
+  .infos div:last-child{border-bottom:0}
+  .infos dt{font:400 15px/24px var(--sans);color:var(--ink-muted)}
+  .infos dd{margin:0;font:400 16px/24px var(--sans);color:var(--ink-body);overflow-wrap:anywhere}
+  .infos div.solo{grid-template-columns:minmax(0,1fr)}
+  @media (max-width:560px){.infos div{grid-template-columns:minmax(0,1fr);gap:2px}}
   .about-co{margin-top:36px;background:var(--gradient-section-light);color:var(--l-ink);border-radius:var(--radius-card);padding:clamp(24px,3.4vw,40px);display:grid;gap:14px}
   .about-co .eyebrow{color:var(--l-ink)}
   .about-co h2{font-size:28px;letter-spacing:-.7px}
+  .about-co #about-txt{display:grid;gap:14px}
   .about-co p{color:var(--l-ink-body);max-width:70ch}
   .about-co em{font-style:normal;font-weight:600;color:var(--vermelho-v4)}
 
@@ -229,8 +242,45 @@
   @media (max-width:960px){.jp-grid{grid-template-columns:1fr}.apply-card{position:static}}
 
 </style>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "x7h3zlx0bc");</script>
+<!-- Google Tag Manager (contêiner da V4 Lima, o mesmo de v4lima.com) -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MZF9ZXPW');</script>
+<!-- End Google Tag Manager -->
+<!-- Origem da visita: guarda UTMs, gclid e fbclid por 30 dias para enviar junto com a inscrição -->
+<script>
+(function(){
+  var K = "v4lima_origem", P = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","gclid","fbclid"];
+  try{
+    var q = new URLSearchParams(location.search), novo = {}, tem = false;
+    P.forEach(function(k){ var v = q.get(k); if(v){ novo[k] = v.slice(0,200); tem = true; } });
+    var salvo = JSON.parse(localStorage.getItem(K) || "null");
+    if(salvo && Date.now() - salvo.ts > 30*864e5) salvo = null;
+    var ref = document.referrer && document.referrer.indexOf(location.host) < 0 ? document.referrer.slice(0,300) : "";
+    if(tem || !salvo){
+      novo.pagina_entrada = (location.pathname + location.search).slice(0,300);
+      novo.referrer = ref; novo.ts = Date.now();
+      localStorage.setItem(K, JSON.stringify(novo));
+    }
+  }catch(e){}
+  window.v4Origem = function(){
+    try{ var o = JSON.parse(localStorage.getItem(K) || "{}"), r = {};
+      P.concat(["pagina_entrada","referrer"]).forEach(function(k){ r[k] = o[k] || ""; }); return r;
+    }catch(e){ return {}; }
+  };
+})();
+</script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZF9ZXPW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <div class="proto" id="proto">Protótipo: vagas ilustrativas e perguntas do formulário provisórias</div>
 
 <nav class="nav" aria-label="Principal">
@@ -262,10 +312,7 @@
       <div id="j-body"></div>
       <section class="about-co" id="about-co">
         <span class="eyebrow">Sobre a empresa</span>
-        <h2>V4 Lima &amp; Co</h2>
-        <p>Fundada em 2012, a V4 Company nasceu para ajudar empresas a vender mais, para mais pessoas, mais vezes e pelo maior valor. Hoje é uma plataforma de aceleração de negócios e carreiras, com unidades em todo o Brasil.</p>
-        <p>A V4 Lima &amp; Co é a unidade Joint Venture Partner (JVP) da V4 no Rio de Janeiro, aberta em janeiro de 2025. Queremos ser <em>a escola da elite comercial da V4</em>: uma unidade que forma e reúne os profissionais mais ambiciosos e executores do Rio.</p>
-        <p>Nossa liderança foi formada dentro do time comercial da V4, de BDR a sócio. Esse é o plano de carreira que oferecemos a quem entra hoje. A meta: estar entre as cinco maiores unidades da rede e ajudar a levar a V4 Company ao IPO.</p>
+        <div id="about-txt"></div>
       </section>
     </article>
 
@@ -331,31 +378,54 @@ document.getElementById("proto").hidden = !!(CONFIG.vagasUrl && CONFIG.inscricao
 
 /* Pergunta feita em todas as vagas, antes das perguntas específicas da planilha */
 const PERGUNTAS_PADRAO = ["Por que você quer fazer parte da V4 Lima & Co?"];
-const BENEFICIOS = ["Starbem","TotalPass","English Pass","ChatGPT Pro","Onhappy","Staage","Parceria Mackenzie","Parceria Wyden","Descontos exclusivos V4"];
-const INSTITUCIONAL = "A V4 Lima & Co é a unidade Joint Venture Partner (JVP) da V4 Company no Rio de Janeiro. Reunimos os profissionais mais ambiciosos e executores do Rio, com metas claras, acompanhamento de perto e um plano de carreira que a nossa liderança já percorreu. Nossa missão: bater todas as metas de maneira consistente e fazer o certo, sempre.";
-const BANCO = { id:"banco-de-talentos", titulo:"Banco de talentos", local:"Rio de Janeiro", nivel:"", modelo:"", contratacao:"", hot:false,
+
+/* "Sobre a empresa": usado quando a coluna "Sobre a empresa" da vaga estiver vazia.
+   Cada linha vira um parágrafo. */
+const SOBRE_EMPRESA_PADRAO = [
+  "Há 13 anos, lideramos o caminho no Marketing Digital, sempre em busca de inovação, nos tornando a maior assessoria de marketing digital do país. Nosso foco é na geração de vendas e na transformação da realidade de milhares de empreendedores, dentro e fora do Brasil. Existimos para vender o seu produto, vender mais vezes, vender para mais pessoas e vender pelo maior valor.",
+  "Estruturados em um sistema de franquias, temos mais de 250 escritórios no Brasil, mais de 6.000 clientes ativos e reunimos mais de 3.500 profissionais e mais de 300 sócios, entre Matriz e Franqueados.",
+  "Nossa jornada continua, queremos elevar a V4 Company a novos patamares, e sabemos que isso só acontece com profissionais excepcionais ao nosso lado."
+].join("\n");
+
+/* Etapas do processo, iguais para todas as vagas */
+const ETAPAS = ["Inscrição por esta página, em menos de 10 minutos","Conversa com o time de People","Entrevista com a liderança, com uma simulação prática da rotina","Proposta, com retorno em todas as etapas"];
+
+const BANCO = { id:"banco-de-talentos", titulo:"Banco de talentos", local:"Rio de Janeiro", endereco:"", nivel:"", modelo:"", contratacao:"", hot:false,
+  remuneracao:"", horario:"", beneficios:"", outras:[], oferece:[], sobre:"", ambiente:"", missao:"",
   desc:"Não encontrou a vaga ideal agora? Deixe seu currículo com a gente. Quando surgir uma oportunidade com o seu perfil, o time de People entra em contato.",
   resp:[], req:[], dif:[], perguntas:["Em qual área você gostaria de atuar?"] };
 
+/* Vaga de exemplo (usada só se vagasUrl estiver vazio). Mesmas colunas da aba "Vagas". */
 const EXEMPLO = [
-  { "Vaga":"BDR Outbound", "Nível":"Júnior", "Modelo":"Presencial", "Local":"Rio de Janeiro", "Destaque":"Sim", "Status":"Aberta", "Contratação":"CLT",
-    "Descrição":"Prospecção ativa de empresas por telefone, WhatsApp e LinkedIn, gerando reuniões qualificadas para o time de closers.",
-    "Responsabilidades":"Prospectar empresas por telefone, WhatsApp e LinkedIn\nQualificar leads e agendar reuniões\nManter o CRM atualizado",
-    "Requisitos":"Boa comunicação\nDisciplina com rotina e metas", "Diferenciais":"Experiência com prospecção outbound",
+  { "Vaga":"BDR Comercial", "Nível":"Júnior", "Modelo":"Presencial", "Local":"Rio de Janeiro", "Endereço":"Centro do Rio de Janeiro, próximo à Candelária",
+    "Destaque":"Sim", "Status":"Aberta", "Contratação":"PJ",
+    "Descrição":"A V4 Company está em busca de um BDR para atuar presencialmente no Centro do Rio de Janeiro.",
+    "Responsabilidades":"Realizar prospecção ativa de novos clientes\nQualificar leads e agendar reuniões comerciais",
+    "Requisitos":"Boa comunicação verbal e escrita\nOrganização e constância na execução",
+    "Remuneração":"R$ 4.000 a R$ 7.000 entre fixo e variável por performance", "Horário":"Segunda a sexta-feira",
+    "Benefícios":"TotalPass, Starbem e outros benefícios", "Outras informações":"Requisito: notebook próprio",
+    "O que a posição oferece":"Proximidade direta com a liderança comercial da operação\nAmbiente de alta exigência e aprendizado prático",
     "Perguntas da inscrição":"Conte uma situação em que você bateu uma meta difícil. O que você fez?" }
 ];
 
 const norm = s => String(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").trim().toLowerCase();
+/* Nome de coluna: ignora acentos, maiúsculas, espaços extras e pontuação no fim (ex.: "Principais responsabilidades:") */
+const col = s => norm(s).replace(/[^a-z0-9]+$/,"").replace(/\s+/g," ").replace(/^principais responsabilidades$/,"responsabilidades");
 const esc = s => String(s||"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const slug = s => norm(s).replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
-const lista = s => String(s||"").split(/\n|;/).map(x=>x.replace(/^[-•\s]+/,"").trim()).filter(Boolean);
+const lista = s => String(s||"").split(/\n|;/).map(x=>x.replace(/^[-•*\s]+/,"").trim()).filter(Boolean);
+const linhas = s => String(s||"").split("\n").map(x=>x.replace(/^[-•*\s]+/,"").replace(/;$/,"").trim()).filter(Boolean);
 
+/* Lê uma linha da aba "Vagas". Aceita nomes de coluna com ou sem acento. */
 function toJob(r){
-  const g = k => { const key = Object.keys(r).find(x => norm(x)===k); return key ? String(r[key]).trim() : ""; };
+  const g = k => { const key = Object.keys(r).find(x => col(x)===k); return key ? String(r[key]).trim() : ""; };
   const titulo = g("vaga");
-  return { id:slug(titulo), titulo, nivel:g("nivel"), modelo:g("modelo"), local:g("local"), desc:g("descricao"),
-    resp:lista(g("responsabilidades")), req:lista(g("requisitos")), dif:lista(g("diferenciais")),
-    contratacao:g("contratacao"), perguntas:String(g("perguntas da inscricao")).split("\n").map(x=>x.trim()).filter(Boolean),
+  return { id:slug(titulo), titulo, nivel:g("nivel"), modelo:g("modelo"), local:g("local"), endereco:g("endereco"),
+    desc:g("descricao"), resp:lista(g("responsabilidades")), req:lista(g("requisitos")), dif:lista(g("diferenciais")),
+    contratacao:g("contratacao"), remuneracao:g("remuneracao"), horario:g("horario"), beneficios:g("beneficios"),
+    outras:linhas(g("outras informacoes")), oferece:lista(g("o que a posicao oferece")), sobre:g("sobre a empresa"),
+    ambiente:g("ambiente de trabalho"), missao:g("missao"),
+    perguntas:linhas(g("perguntas da inscricao")),
     hot:norm(g("destaque"))==="sim", aberta:norm(g("status"))!=="fechada" };
 }
 async function carregarVagas(){
@@ -374,11 +444,31 @@ const ico = {
 };
 const sec = (t, inner) => `<section class="jsec"><h2>${t}</h2>${inner}</section>`;
 const ul = a => `<ul>${a.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`;
-const paras = t => String(t).split(/\n+/).filter(Boolean).map(p=>`<p>${esc(p)}</p>`).join("");
+/* Itens "Nome: descrição" ganham o nome em destaque (ex.: Staage: plataforma com mais de 60 cursos) */
+const ulRot = a => `<ul>${a.map(x=>{ const i=x.indexOf(":"); return (i>0 && i<=40) ? `<li><span><strong>${esc(x.slice(0,i))}:</strong>${esc(x.slice(i+1))}</span></li>` : `<li>${esc(x)}</li>`; }).join("")}</ul>`;
+const paras = t => String(t).split(/\n+/).map(p=>p.trim()).filter(Boolean).map(p=>`<p>${esc(p)}</p>`).join("");
+/* Lista "Rótulo: valor" da seção Informações da vaga */
+const dl = rows => `<dl class="infos">${rows.map(([k,v]) => k
+  ? `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`
+  : `<div class="solo"><dd>${esc(v)}</dd></div>`).join("")}</dl>`;
+/* "Requisito: notebook próprio" vira ["Requisito", "notebook próprio"] */
+const rotulo = l => { const i = l.indexOf(":"); return (i > 0 && i <= 40) ? [l.slice(0,i).trim(), l.slice(i+1).trim()] : ["", l]; };
+function informacoes(j){
+  return [
+    ["Modelo", j.modelo],
+    ["Local", j.endereco || j.local],
+    ["Formato de contratação", j.contratacao],
+    ["Remuneração", j.remuneracao],
+    ["Horário", j.horario],
+    ["Benefícios", linhas(j.beneficios).join(", ")],
+    ...j.outras.map(rotulo)
+  ].filter(([,v]) => v);
+}
 let JOB = null;
 
 function render(j, manterForm){
   JOB = j;
+  if(window.__vagaVista !== j.id){ window.__vagaVista = j.id; (window.dataLayer = window.dataLayer || []).push({ event:"vaga_view", vaga:j.titulo, vaga_id:j.id }); }
   document.title = j.titulo + " | V4 Lima & Co";
   $("j-title").textContent = j.titulo;
   $("f-title").textContent = j.titulo;
@@ -389,16 +479,20 @@ function render(j, manterForm){
     j.nivel ? `<span>${ico.lvl}${esc(j.nivel)}</span>` : "",
     j.contratacao ? `<span>${ico.doc}${esc(j.contratacao)}</span>` : ""
   ].join("");
-  let b = sec("Quem somos", `<p>${esc(INSTITUCIONAL)}</p>`);
-  if(j.desc) b += sec(j.id===BANCO.id ? "Como funciona" : "Sobre o desafio", paras(j.desc));
-  if(j.resp.length) b += sec("O que você fará", ul(j.resp));
-  if(j.req.length) b += sec("O que buscamos", ul(j.req));
+  /* Mesma ordem do modelo de vaga usado pelo time de People */
+  let b = "";
+  if(j.desc) b += sec(j.id===BANCO.id ? "Como funciona" : "Sobre a vaga", `<div class="intro">${paras(j.desc)}</div>`);
+  if(j.ambiente) b += sec("Sobre o ambiente de trabalho", `<div class="intro">${paras(j.ambiente)}</div>`);
+  if(j.missao) b += sec(`Sua missão como ${esc(j.titulo)}`, `<div class="intro">${paras(j.missao)}</div>`);
+  if(j.resp.length) b += sec("Principais responsabilidades", ul(j.resp));
+  if(j.req.length) b += sec("Requisitos", ul(j.req));
   if(j.dif.length) b += sec("Diferenciais que valorizamos", ul(j.dif));
-  b += sec("O que oferecemos", `<ul class="perks">${BENEFICIOS.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`);
-  const modelo = [j.modelo, j.local, j.contratacao && ("Contratação " + j.contratacao)].filter(Boolean);
-  if(modelo.length && j.id!==BANCO.id) b += sec("Modelo de trabalho", ul(modelo));
-  b += sec("Etapas do processo", ul(["Inscrição por esta página, em menos de 10 minutos","Conversa com o time de People","Entrevista com a liderança, com uma simulação prática da rotina","Proposta, com retorno em todas as etapas"]));
+  const infos = informacoes(j);
+  if(infos.length && j.id!==BANCO.id) b += sec("Informações da vaga", dl(infos));
+  if(j.oferece.length) b += sec("O que oferecemos", ulRot(j.oferece));
+  b += sec("Etapas do processo", ul(ETAPAS));
   $("j-body").innerHTML = b;
+  $("about-txt").innerHTML = paras(j.sobre || SOBRE_EMPRESA_PADRAO);
 
   const perguntas = [...PERGUNTAS_PADRAO, ...j.perguntas];
   if(!manterForm)
@@ -414,6 +508,7 @@ function naoEncontrada(falhou){
   $("j-title").textContent = falhou ? "Não conseguimos carregar a vaga" : "Vaga não encontrada";
   $("j-body").innerHTML = `<section class="jsec"><p>${falhou ? "Atualize a página em alguns instantes." : "Esta vaga pode ter sido encerrada."} Veja as vagas abertas na <a href="index.html#vagas">página de carreiras</a>.</p></section>`;
   $("apply").hidden = true;
+  $("about-txt").innerHTML = paras(SOBRE_EMPRESA_PADRAO);
 }
 
 /* Cache: usa a lista salva pela LP para abrir a vaga na hora e confere a versão atual em segundo plano */
@@ -439,7 +534,7 @@ function salvarCache(raw){ try{ localStorage.setItem(CACHE_KEY, JSON.stringify(r
 })();
 
 $("sh-copy").addEventListener("click", async () => {
-  try{ await navigator.clipboard.writeText(location.href); $("sh-copy").setAttribute("aria-label","Link copiado"); $("sh-copy").style.background="var(--red)"; }
+  try{ await navigator.clipboard.writeText(location.href); $("sh-copy").setAttribute("aria-label","Link copiado"); $("sh-copy").style.background="var(--tab-active-bg)"; }
   catch(e){}
 });
 
@@ -476,6 +571,8 @@ $("cv-rm").addEventListener("click", () => { CV = null; $("cv-chip").hidden = tr
 
 /* ---------- etapas ---------- */
 function erro(n, msg){ const el = $("err"+n); el.textContent = msg; el.hidden = false; }
+/* Eventos para o GTM (sem nome, e-mail ou telefone) */
+const evento = (nome, extra) => { try{ (window.dataLayer = window.dataLayer || []).push(Object.assign({ event:nome, vaga: JOB ? JOB.titulo : "", vaga_id: JOB ? JOB.id : "" }, extra||{})); }catch(e){} };
 function passo(n){
   $("step1").hidden = n!==1; $("step2").hidden = n!==2;
   $("st1").classList.toggle("on", n===1); $("st2").classList.toggle("on", n===2);
@@ -494,6 +591,7 @@ $("next").addEventListener("click", () => {
   $("linkedin").value = /^https?:\/\//i.test(li) ? li : "https://" + li.replace(/^\/+/,"");
   if(!CV){ erro(1, "Anexe o seu currículo para continuar."); return; }
   passo(2);
+  evento("lead_form_step", { etapa: 2 });
 });
 $("prev").addEventListener("click", () => passo(1));
 $("step1").addEventListener("input", () => { $("err1").hidden = true; });
@@ -517,8 +615,10 @@ $("form").addEventListener("submit", async e => {
     motivo: respostas[0] ? respostas[0].a : "",
     respostas: respostas.map(r => `${r.q}\n${r.a}`).join("\n\n"),
     lgpd: $("lgpd").checked,
-    curriculo: CV
+    curriculo: CV,
+    ...(window.v4Origem ? window.v4Origem() : {})
   };
+  evento("lead_form_submit");
 
   if($("site_empresa").value){ /* robô: não envia */ }
   else if(CONFIG.inscricaoUrl){
@@ -526,15 +626,17 @@ $("form").addEventListener("submit", async e => {
     try{
       const r = await fetch(CONFIG.inscricaoUrl, { method:"POST", headers:{"Content-Type":"text/plain;charset=utf-8"}, body:JSON.stringify(data) });
       const resp = await r.json().catch(()=>({ok:false, erro:"resposta inválida"}));
-      if(resp.motivo){ s.disabled = false; s.textContent = "Enviar inscrição"; return erro(2, resp.motivo); }
+      if(resp.motivo){ s.disabled = false; s.textContent = "Enviar inscrição"; evento("lead_form_error", { motivo: resp.motivo }); return erro(2, resp.motivo); }
       if(!r.ok || resp.ok === false) throw new Error(resp.erro || r.status);
     }catch(x){
       s.disabled = false; s.textContent = "Enviar inscrição";
+      evento("lead_form_error", { motivo: "falha de envio" });
       return erro(2, "Não conseguimos enviar agora. Verifique a sua conexão e tente de novo em alguns instantes.");
     }
   } else {
     $("done-msg").textContent = "Modo protótipo: esta inscrição não foi enviada. Quando a página estiver conectada à planilha de People, as respostas chegam lá automaticamente.";
   }
+  evento("lead_form_success");
   $("done-name").textContent = data.nome.split(" ")[0];
   $("form").hidden = true; document.querySelector(".stepper").hidden = true; document.querySelector(".for").hidden = true;
   $("done").hidden = false;
