@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Vaga | V4 Lima &amp; Co</title>
 <meta name="description" content="Vaga na V4 Lima &amp; Co, unidade da V4 Company no Centro do Rio de Janeiro. Veja responsabilidades, perfil, remuneração e como se inscrever.">
-<meta name="theme-color" content="#000000">
+<meta name="theme-color" content="#FB2E0A">
 <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAOVBMVEVMaXHlCRTmBxX////mFiHmCRTkBxTmCRTlCBT96+zlCRTyhIn2o6bvZm3pKzX50dLsSFD4vL/zk5iZ4xvAAAAACnRSTlMAn2///sIq33/3gxiRowAAAAlwSFlzAAALEwAACxMBAJqcGAAAAOhJREFUeNrl1ssOgyAQQFEtLxkQsf//sUWBWnUYsIumae9uNCeKxkjXfXeD0CGrqMQgNyA5AAtZoFNPIxW0EeCZ9NBKYEhEIIQbu+QBRrPm1sMiEXUmTi8zmzgYFovnVJGcRY0gokIwQRNUkCQJvRcUycLtBUHyXR1FmeDroAgmZpJMiBg9SRgioIEcRAM5CoLogoCxSOLDOguCrAYRFAkGEyQBhwmaACYqxLNa+n0i2gn7ZcINUvoq5zgdCVp6lfc4XSH2T4nz3oX4jvTQXP5XynbSd1cvs+0VWo142ZF08jZUu8lPbqseUSU5DJz2rZYAAAAASUVORK5CYII=">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap">
 <style>
   /* ==========================================================
      Design system V4 (extraído da LP V4 Assessoria)
@@ -241,6 +241,119 @@
   .jp h1,.jsec p,.jsec li,.about-co p{overflow-wrap:anywhere}
   @media (max-width:960px){.jp-grid{grid-template-columns:1fr}.apply-card{position:static}}
 
+
+  /* =====================================================================
+     Padrão visual do site da V4 Company (igual à LP)
+     ===================================================================== */
+  :root{
+    color-scheme: light;
+    --vermelho-v4:#FB2E0A; --coral:#FB2E0A;
+    --surface:#ffffff; --ink:#050505; --ink-body:#1E2124; --ink-muted:#606060; --ink-nav:#606060;
+    --tab-bg:#F2F2F2; --tab-text:#1E2124; --tab-active-bg:#FB2E0A;
+    --faq-bg:#ffffff; --glass-bg:#F2F2F2; --divider:#E4E4E4; --footer-link:#FB2E0A;
+    --gradient-section-light:#F2F2F2;
+    --sans:"IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+    --mono:"IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+    --cta:#0E8420; --cta-hover:#FF6200; --cta-ativo:#E55700;
+    --ease-out-expo:cubic-bezier(.19,1,.22,1);
+    --col:1240px;
+  }
+  body{background:#fff;color:var(--ink);font:400 17px/1.55 var(--sans)}
+  h1,h2,h3{font-weight:400;letter-spacing:-.03em}
+  .wrap{max-width:var(--col);padding-inline:clamp(20px,4.2vw,64px)}
+  .proto{background:#fdff87;color:#111}
+
+  /* cabeçalho em pílula */
+  .cab{position:fixed;inset:0 0 auto;z-index:50;padding:18px clamp(20px,4.2vw,64px);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;pointer-events:none}
+  .cab > *{pointer-events:auto}
+  .cab .logo{display:inline-flex;align-items:center;gap:12px;color:var(--vermelho-v4);text-decoration:none;justify-self:start}
+  .cab .logo svg{width:30px;height:28px}
+  .cab .logo .unid{font:500 14px/1 var(--sans);padding-left:12px;border-left:1px solid currentColor;color:var(--ink)}
+  .menu{display:flex;gap:4px;padding:6px;border-radius:999px;background:rgba(90,90,90,.6);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 10px 30px rgba(0,0,0,.16)}
+  .menu a{display:block;padding:10px 16px;border-radius:999px;color:#fff;text-decoration:none;font:600 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;transition:background .3s}
+  .menu a:hover{background:rgba(255,255,255,.16)}
+  .cab .btn{justify-self:end}
+  @media (max-width:900px){.menu{display:none}.cab{grid-template-columns:1fr auto}}
+
+  /* botões no padrão V4: pílula verde com círculo de seta */
+  .btn{background:var(--cta);color:#fff;box-shadow:none;border-radius:999px;padding:6px 6px 6px 26px;min-height:52px;gap:16px;font:600 16px/1 var(--sans);
+    transition:background .35s var(--ease-out-expo),transform .35s var(--ease-out-expo)}
+  .btn:hover{background:var(--cta-hover);filter:none;transform:none}
+  .btn:active{background:var(--cta-ativo)}
+  .btn .seta{width:40px;height:40px;border-radius:50%;background:#fff;display:grid;place-items:center;flex:none;transition:transform .5s var(--ease-out-expo)}
+  .btn .seta svg{width:16px;height:16px;stroke:var(--cta);fill:none}
+  .btn:hover .seta{transform:rotate(45deg)}
+  .btn:hover .seta svg{stroke:var(--cta-hover)}
+  .btn.sm,.cab .btn{min-height:44px;font-size:14px;gap:12px;padding-left:20px}
+  .btn.sm .seta,.cab .btn .seta{width:34px;height:34px}
+  .af .btn{padding-left:26px}
+  #send{padding:6px 26px}
+  .btn-ghost{background:#fff;color:var(--ink);border:1px solid var(--divider);border-radius:999px}
+  .btn-ghost:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+  /* etiquetas */
+  .eyebrow{height:28px;padding:0 14px;border:1px solid var(--divider);border-radius:999px;font:600 11px/1 var(--sans);letter-spacing:.14em;color:var(--ink);width:max-content}
+  .eyebrow::before{width:6px;height:6px}
+
+  /* página da vaga */
+  .jp{padding-top:clamp(110px,10vw,140px)}
+  .back{color:var(--ink-muted);font-weight:500}
+  .back:hover{color:var(--vermelho-v4)}
+  .share a,.share button{background:#fff;border:1px solid var(--divider)}
+  .share svg{fill:var(--ink)}
+  .share a:hover,.share button:hover{background:var(--vermelho-v4);border-color:var(--vermelho-v4)}
+  .share a:hover svg,.share button:hover svg{fill:#fff}
+  .jp h1{font:400 clamp(40px,1.6rem + 3vw,72px)/1.04 var(--sans);letter-spacing:-.045em}
+  .chips span{background:#fff;border:1px solid #cfcfcf;color:var(--ink-muted);font:500 13px/1 var(--sans);padding:8px 14px}
+  .chips span.hot{background:var(--vermelho-v4);border-color:var(--vermelho-v4);color:#fff}
+  .jsec{padding-block:34px}
+  .jsec h2{font:400 clamp(24px,1.1rem + 1vw,34px)/1.15 var(--sans);letter-spacing:-.035em}
+  .jsec p,.jsec .intro p{color:var(--ink-body);font-size:17px}
+  .jsec li{color:var(--ink-body);font-size:17px}
+  .jsec li::before{width:16px;height:16px;margin-top:5px;
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FB2E0A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17L17 7M8 7h9v9'/%3E%3C/svg%3E") no-repeat center/contain}
+  .infos dt{color:var(--ink-muted)}
+  .infos dd{color:var(--ink)}
+  .about-co{background:linear-gradient(112deg,#b80b07 0%,#FB2E0A 60%,#e01d0c 100%);color:#fff;border-radius:20px;margin-top:44px}
+  .about-co .eyebrow{color:#fff;border-color:#ffffff66}
+  .about-co .eyebrow::before{background:#fff}
+  .about-co p{color:#ffffffe6}
+
+  /* cartão de inscrição */
+  .apply-card{top:110px;background:#F2F2F2;border:0;border-radius:24px;box-shadow:none;padding:clamp(22px,2.6vw,32px)}
+  .stepper span{background:#fff;color:var(--ink-muted);font:500 13px/1.2 var(--sans)}
+  .stepper span.on{background:var(--ink);color:#fff;font-weight:600}
+  .af input[type=text],.af input[type=email],.af input[type=tel],.af input[type=url],.af textarea{background:#fff;border:1px solid var(--divider);color:var(--ink);border-radius:14px}
+  .af input::placeholder,.af textarea::placeholder{color:#9a9a9a}
+  .af input:focus,.af textarea:focus{border-color:var(--ink)}
+  .tel .ddi{background:#fff;border-color:var(--divider);border-radius:14px 0 0 14px}
+  .tel input{border-radius:0 14px 14px 0!important}
+  .upload{border:1px dashed var(--vermelho-v4);background:#fff;color:var(--vermelho-v4);border-radius:14px}
+  .upload:hover{background:var(--vermelho-v4);color:#fff}
+  .file-chip{background:#fff;border-color:var(--divider);border-radius:14px}
+  .err{color:#c5221f}
+  .priv{color:var(--ink-muted)}
+  .ok-ico{background:var(--cta)}
+
+  /* política de privacidade */
+  .doc{padding-top:clamp(120px,11vw,160px)}
+  .doc h1{font:400 clamp(38px,1.5rem + 2.6vw,64px)/1.05 var(--sans);letter-spacing:-.045em}
+  .doc h2{font:400 clamp(24px,1.1rem + .9vw,32px)/1.2 var(--sans);letter-spacing:-.03em}
+  .doc p,.doc li{color:var(--ink-body)}
+
+  /* rodapé vermelho */
+  footer.rodape{position:relative;overflow:hidden;border:0;color:#fff;background:linear-gradient(112deg,#a90c08 0%,#FB2E0A 60%,#e01d0c 100%);padding-block:56px 32px}
+  footer.rodape .wrap{display:flex;flex-wrap:wrap;gap:20px 40px;justify-content:space-between;align-items:center;font:400 14px/1.4 var(--sans);color:#ffffffd9}
+  footer.rodape .marca{display:flex;align-items:center;gap:14px;color:#fff;text-decoration:none}
+  footer.rodape .marca svg{width:48px;height:44px}
+  footer.rodape nav{display:flex;flex-wrap:wrap;gap:8px 24px}
+  footer.rodape nav a{color:#fff;text-decoration:none;font-size:14px}
+  footer.rodape nav a:hover{text-decoration:underline}
+
+  /* entrada suave */
+  [data-r]{opacity:0;transform:translateY(36px);transition:opacity 1s var(--ease-out-expo),transform 1.2s var(--ease-out-expo)}
+  [data-r].visto{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){[data-r]{opacity:1;transform:none;transition:none}}
 </style>
 <!-- Microsoft Clarity -->
 <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "x7h3zlx0bc");</script>
@@ -283,18 +396,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="proto" id="proto">Protótipo: vagas ilustrativas e perguntas do formulário provisórias</div>
 
-<nav class="nav" aria-label="Principal">
-  <div class="wrap">
-    <a class="brand" href="index.html#topo" aria-label="V4 Lima &amp; Co, início"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 24" width="26" height="24" aria-hidden="true"><g><path d="M 21.95 2.417 L 21.95 12.332 L 18.957 12.332 C 18.857 12.332 18.807 12.332 18.807 12.184 L 18.807 2.565 C 18.807 2.318 18.658 2.17 18.408 2.17 L 15.365 2.17 C 15.215 2.17 15.166 2.22 15.066 2.318 L 13.419 3.946 L 5.039 12.233 C 4.889 12.381 4.839 12.529 4.839 12.726 L 4.839 15.834 C 4.839 15.982 4.889 16.031 5.039 16.031 L 15.315 16.031 L 15.315 19.238 C 15.315 19.385 15.315 19.385 15.465 19.385 C 16.512 19.385 17.61 19.336 18.658 19.336 C 18.807 19.336 18.807 19.336 18.807 19.188 C 18.807 18.202 18.807 17.215 18.757 16.229 C 18.757 16.081 18.757 16.031 18.957 16.031 L 22 16.031 L 22 19.583 C 22 19.682 21.95 19.83 21.95 19.928 C 21.751 21.112 20.653 22 19.456 22 L 2.594 22 C 2.321 21.999 2.051 21.949 1.796 21.852 C 0.748 21.506 0.05 20.52 0.05 19.386 L 0.05 14.995 C 0 10.852 0 6.758 0 2.614 L 0 2.269 C 0.15 1.184 0.948 0.345 1.995 0.099 C 2.145 0.049 2.295 0.049 2.444 0 L 2.444 9.57 C 2.444 9.668 2.494 9.767 2.594 9.865 C 3.143 10.359 3.642 10.901 4.19 11.444 C 4.34 11.592 4.34 11.592 4.49 11.444 C 6.385 9.57 8.281 7.695 10.227 5.821 C 11.424 4.637 12.571 3.453 13.769 2.269 C 13.819 2.22 13.819 2.17 13.868 2.121 L 10.825 2.121 C 10.726 2.121 10.626 2.17 10.576 2.22 C 10.227 2.417 9.977 2.713 9.728 2.96 L 4.939 7.695 L 4.839 7.794 C 4.839 7.646 4.789 7.547 4.789 7.448 L 4.789 3.453 C 4.789 2.565 4.789 1.726 4.739 0.838 L 4.739 0.099 C 4.789 0.049 4.789 0 4.889 0 L 19.256 0 C 19.406 0 19.555 0 19.705 0.049 C 20.753 0.197 21.601 0.937 21.85 1.924 C 21.9 2.071 21.9 2.269 21.95 2.417 Z" fill="#ffffff"></path><path d="M 15.356 12.374 L 9.969 12.374 C 10.019 12.226 15.107 7.195 15.406 7.047 C 15.356 8.823 15.356 10.599 15.356 12.374 Z" fill="#ffffff"></path></g></svg><span class="unit">Lima &amp; Co</span></a>
-    <ul>
-      <li><a href="index.html#quem-somos">Quem somos</a></li>
-      <li><a href="index.html#diferenciais">Diferenciais</a></li>
-      <li><a href="index.html#vagas">Vagas</a></li>
-      <li><a href="index.html#processo">Processo</a></li>
-    </ul>
-    <a class="btn sm" href="index.html#vagas">Ver vagas <svg class="arr" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.589 32.589"><g><path d="M 16.294 32.589 C 7.295 32.589 0 25.294 0 16.294 L 0 16.294 C 0 7.295 7.295 0 16.294 0 L 16.294 0 C 25.294 0 32.589 7.295 32.589 16.294 L 32.589 16.294 C 32.589 25.294 25.294 32.589 16.294 32.589 Z" fill="rgba(255,255,255,0.1)"></path><path d="M 11.5 16.253 L 21.005 16.253 M 16.252 11.5 L 21.005 16.253 L 16.252 21.005" fill="none" stroke-width="1.358" stroke="rgba(255,255,255,0.8)" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray=""></path></g></svg></a>
-  </div>
-</nav>
+<header class="cab">
+  <a class="logo" href="index.html#topo" aria-label="V4 Lima &amp; Co, início"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 24" width="26" height="24" aria-hidden="true"><g><path d="M 21.95 2.417 L 21.95 12.332 L 18.957 12.332 C 18.857 12.332 18.807 12.332 18.807 12.184 L 18.807 2.565 C 18.807 2.318 18.658 2.17 18.408 2.17 L 15.365 2.17 C 15.215 2.17 15.166 2.22 15.066 2.318 L 13.419 3.946 L 5.039 12.233 C 4.889 12.381 4.839 12.529 4.839 12.726 L 4.839 15.834 C 4.839 15.982 4.889 16.031 5.039 16.031 L 15.315 16.031 L 15.315 19.238 C 15.315 19.385 15.315 19.385 15.465 19.385 C 16.512 19.385 17.61 19.336 18.658 19.336 C 18.807 19.336 18.807 19.336 18.807 19.188 C 18.807 18.202 18.807 17.215 18.757 16.229 C 18.757 16.081 18.757 16.031 18.957 16.031 L 22 16.031 L 22 19.583 C 22 19.682 21.95 19.83 21.95 19.928 C 21.751 21.112 20.653 22 19.456 22 L 2.594 22 C 2.321 21.999 2.051 21.949 1.796 21.852 C 0.748 21.506 0.05 20.52 0.05 19.386 L 0.05 14.995 C 0 10.852 0 6.758 0 2.614 L 0 2.269 C 0.15 1.184 0.948 0.345 1.995 0.099 C 2.145 0.049 2.295 0.049 2.444 0 L 2.444 9.57 C 2.444 9.668 2.494 9.767 2.594 9.865 C 3.143 10.359 3.642 10.901 4.19 11.444 C 4.34 11.592 4.34 11.592 4.49 11.444 C 6.385 9.57 8.281 7.695 10.227 5.821 C 11.424 4.637 12.571 3.453 13.769 2.269 C 13.819 2.22 13.819 2.17 13.868 2.121 L 10.825 2.121 C 10.726 2.121 10.626 2.17 10.576 2.22 C 10.227 2.417 9.977 2.713 9.728 2.96 L 4.939 7.695 L 4.839 7.794 C 4.839 7.646 4.789 7.547 4.789 7.448 L 4.789 3.453 C 4.789 2.565 4.789 1.726 4.739 0.838 L 4.739 0.099 C 4.789 0.049 4.789 0 4.889 0 L 19.256 0 C 19.406 0 19.555 0 19.705 0.049 C 20.753 0.197 21.601 0.937 21.85 1.924 C 21.9 2.071 21.9 2.269 21.95 2.417 Z" fill="currentColor"></path><path d="M 15.356 12.374 L 9.969 12.374 C 10.019 12.226 15.107 7.195 15.406 7.047 C 15.356 8.823 15.356 10.599 15.356 12.374 Z" fill="currentColor"></path></g></svg><span class="unid">Lima &amp; Co</span></a>
+  <nav class="menu" aria-label="Principal">
+    <a href="index.html#escada">A escada</a>
+    <a href="index.html#a-real">A real do trabalho</a>
+    <a href="index.html#processo">Processo</a>
+    <a href="index.html#vagas">Vagas</a>
+  </nav>
+  <a class="btn sm" href="index.html#vagas">Ver vagas <span class="seta"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span></a>
+</header>
 
 <main class="jp">
   <div class="wrap jp-grid">
@@ -335,7 +446,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <span class="help">PDF ou Word, até 5 MB.</span></div>
             <div class="fld"><label for="pretensao">Pretensão salarial <i>*</i></label><input type="text" id="pretensao" name="pretensao" inputmode="numeric" placeholder="R$ 0.000,00" required></div>
             <p class="err" id="err1" hidden></p>
-            <button type="button" class="btn" id="next">Continuar inscrição <svg class="arr" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.589 32.589"><g><path d="M 16.294 32.589 C 7.295 32.589 0 25.294 0 16.294 L 0 16.294 C 0 7.295 7.295 0 16.294 0 L 16.294 0 C 25.294 0 32.589 7.295 32.589 16.294 L 32.589 16.294 C 32.589 25.294 25.294 32.589 16.294 32.589 Z" fill="rgba(255,255,255,0.1)"></path><path d="M 11.5 16.253 L 21.005 16.253 M 16.252 11.5 L 21.005 16.253 L 16.252 21.005" fill="none" stroke-width="1.358" stroke="rgba(255,255,255,0.8)" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray=""></path></g></svg></button>
+            <button type="button" class="btn" id="next">Continuar inscrição <span class="seta"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span></button>
             <p class="priv">Seus dados são usados apenas para processos seletivos da V4 Lima &amp; Co. <a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a></p>
           </div>
 
@@ -352,17 +463,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="ok-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></div>
           <h3>Inscrição enviada, <span id="done-name"></span>!</h3>
           <p id="done-msg">Recebemos a sua candidatura. O time de People vai analisar o seu perfil e dar retorno pelo e-mail ou WhatsApp informados, seja qual for o resultado.</p>
-          <a class="btn" href="index.html#vagas">Ver outras vagas <svg class="arr" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.589 32.589"><g><path d="M 16.294 32.589 C 7.295 32.589 0 25.294 0 16.294 L 0 16.294 C 0 7.295 7.295 0 16.294 0 L 16.294 0 C 25.294 0 32.589 7.295 32.589 16.294 L 32.589 16.294 C 32.589 25.294 25.294 32.589 16.294 32.589 Z" fill="rgba(255,255,255,0.1)"></path><path d="M 11.5 16.253 L 21.005 16.253 M 16.252 11.5 L 21.005 16.253 L 16.252 21.005" fill="none" stroke-width="1.358" stroke="rgba(255,255,255,0.8)" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray=""></path></g></svg></a>
+          <a class="btn" href="index.html#vagas">Ver outras vagas <span class="seta"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span></a>
         </div>
       </div>
     </aside>
   </div>
 </main>
 
-<footer>
+<footer class="rodape">
   <div class="wrap">
+    <a class="marca" href="index.html#topo" aria-label="V4 Lima &amp; Co, início"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 24" width="26" height="24" aria-hidden="true"><g><path d="M 21.95 2.417 L 21.95 12.332 L 18.957 12.332 C 18.857 12.332 18.807 12.332 18.807 12.184 L 18.807 2.565 C 18.807 2.318 18.658 2.17 18.408 2.17 L 15.365 2.17 C 15.215 2.17 15.166 2.22 15.066 2.318 L 13.419 3.946 L 5.039 12.233 C 4.889 12.381 4.839 12.529 4.839 12.726 L 4.839 15.834 C 4.839 15.982 4.889 16.031 5.039 16.031 L 15.315 16.031 L 15.315 19.238 C 15.315 19.385 15.315 19.385 15.465 19.385 C 16.512 19.385 17.61 19.336 18.658 19.336 C 18.807 19.336 18.807 19.336 18.807 19.188 C 18.807 18.202 18.807 17.215 18.757 16.229 C 18.757 16.081 18.757 16.031 18.957 16.031 L 22 16.031 L 22 19.583 C 22 19.682 21.95 19.83 21.95 19.928 C 21.751 21.112 20.653 22 19.456 22 L 2.594 22 C 2.321 21.999 2.051 21.949 1.796 21.852 C 0.748 21.506 0.05 20.52 0.05 19.386 L 0.05 14.995 C 0 10.852 0 6.758 0 2.614 L 0 2.269 C 0.15 1.184 0.948 0.345 1.995 0.099 C 2.145 0.049 2.295 0.049 2.444 0 L 2.444 9.57 C 2.444 9.668 2.494 9.767 2.594 9.865 C 3.143 10.359 3.642 10.901 4.19 11.444 C 4.34 11.592 4.34 11.592 4.49 11.444 C 6.385 9.57 8.281 7.695 10.227 5.821 C 11.424 4.637 12.571 3.453 13.769 2.269 C 13.819 2.22 13.819 2.17 13.868 2.121 L 10.825 2.121 C 10.726 2.121 10.626 2.17 10.576 2.22 C 10.227 2.417 9.977 2.713 9.728 2.96 L 4.939 7.695 L 4.839 7.794 C 4.839 7.646 4.789 7.547 4.789 7.448 L 4.789 3.453 C 4.789 2.565 4.789 1.726 4.739 0.838 L 4.739 0.099 C 4.789 0.049 4.789 0 4.889 0 L 19.256 0 C 19.406 0 19.555 0 19.705 0.049 C 20.753 0.197 21.601 0.937 21.85 1.924 C 21.9 2.071 21.9 2.269 21.95 2.417 Z" fill="currentColor"></path><path d="M 15.356 12.374 L 9.969 12.374 C 10.019 12.226 15.107 7.195 15.406 7.047 C 15.356 8.823 15.356 10.599 15.356 12.374 Z" fill="currentColor"></path></g></svg></a>
+    <nav aria-label="Rodapé"><a href="index.html#escada">A escada</a><a href="index.html#processo">Processo</a><a href="index.html#vagas">Vagas</a><a href="privacidade.html">Política de Privacidade</a><a href="https://www.v4company.com/" target="_blank" rel="noopener">v4company.com</a></nav>
     <span>2026 © V4 Lima &amp; Co · People &amp; Culture · Rio de Janeiro</span>
-    <a class="top" href="#"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 8l5-5 5 5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Retornar ao topo</a>
   </div>
 </footer>
 

@@ -5,7 +5,6 @@
 
 // Textos que já vêm preenchidos ao abrir "Nova vaga". Tudo pode ser alterado no formulário antes de salvar.
 const PADRAO_VAGA = {
-  'Nível': 'Júnior',
   'Modelo': 'Presencial',
   'Local': 'Rio de Janeiro',
   'Endereço': 'Centro do Rio de Janeiro, próximo à Candelária',
@@ -115,7 +114,7 @@ const PAINEL_HTML = `<!DOCTYPE html>
 <form id="f">
   <h3 class="primeiro">Vaga</h3>
   <label for="c1">Nome da vaga</label><input type="text" id="c1" name="Vaga" placeholder="Ex.: BDR Comercial">
-  <label for="c2">Nível</label><select id="c2" name="Nível"><option>Estágio</option><option selected>Júnior</option><option>Pleno</option><option>Sênior</option></select>
+  <label for="c2">Nível <small>(opcional, só aparece no site se escolher)</small></label><select id="c2" name="Nível"><option value="">Não informar</option><option>Estágio</option><option>Júnior</option><option>Pleno</option><option>Sênior</option></select>
   <label for="c3">Modelo de trabalho</label><select id="c3" name="Modelo"><option>Presencial</option><option>Híbrido</option><option>Remoto</option></select>
   <label for="c4">Cidade <small>(aparece na etiqueta e no filtro do site)</small></label><input type="text" id="c4" name="Local">
   <label for="c5">Endereço <small>(aparece em Informações da vaga)</small></label><input type="text" id="c5" name="Endereço" placeholder="Ex.: Centro do Rio de Janeiro, próximo à Candelária">
