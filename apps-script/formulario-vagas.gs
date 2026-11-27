@@ -119,7 +119,7 @@ const PAINEL_HTML = `<!DOCTYPE html>
   <label for="c9">Diferenciais <small>(opcional, um por linha)</small></label><textarea id="c9" name="Diferenciais"></textarea>
 
   <h3>Informações da vaga</h3>
-  <label for="c10">Formato de contratação <small>(ex.: CLT, PJ, Estágio)</small></label><input type="text" id="c10" name="Contratação">
+  <label for="c10">Formato de contratação</label><select id="c10" name="Contratação"><option value="">Selecione</option><option>CLT</option><option>PJ</option><option>Estágio</option></select>
   <label for="c11">Remuneração</label><input type="text" id="c11" name="Remuneração" placeholder="Ex.: R$ 4.000 a R$ 7.000 entre fixo e variável">
   <label for="c12">Horário</label><input type="text" id="c12" name="Horário">
   <label for="c13">Benefícios <small>(opcional, resumo em uma linha)</small></label><input type="text" id="c13" name="Benefícios">
